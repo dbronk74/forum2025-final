@@ -1,0 +1,7 @@
+WorldSpeakArena-bg.png         → WorldSpeak Arena branch background
+GauntletTrials-bg.png          → The Gauntlet branch background
+InnerTemple-bg.png             → Religious/Spiritual branch background
+CodexSanctum-bg.png            → Codex Sanctum branch background
+ForumRoundTable-bg.png         → Round Table background
+SanctumCouncilCompass-bg.png   → Council/Politics branch background
+ForumTube-bg.png               → Creative / Verse branch background

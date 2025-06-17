@@ -1,0 +1,15 @@
+.glow-text {
+  color: #fff;
+  text-shadow: 0 0 5px #00f, 0 0 10px #0ff, 0 0 15px #0ff;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

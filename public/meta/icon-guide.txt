@@ -1,0 +1,7 @@
+favicon.png                    → General Forum favicon
+favicon-gauntlet.png           → Gauntlet-specific icon
+favicon-oracle.png             → Oracle AI / Personal Guide
+favicon-temple.png             → Spiritual / Religious
+favicon-sanctum.png            → Codex / Archives
+favicon-tube.png               → ForumTube Creative Branch
+favicon-roundtable.png         → The Round Table
