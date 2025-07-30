@@ -1,14 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import BranchHeader from '../components/BranchHeader';
-import BranchFooter from '../components/BranchFooter';
-// import removed: CodexArcLineageViewer (missing component)
-import CodexLoreDiffViewer from '../components/CodexLoreDiffViewer';
-// import removed: CodexTemporalScroll (missing component)
+import BranchHeader from '../components/RoundTable/BranchHeader';
+import BranchFooter from '../components/RoundTable/BranchFooter';
+
+// Codex Components
+import CodexLoreDiffViewer from '../components/CodexSanctum/CodexLoreDiffViewer';
+import CodexHeatstreamViewer from '../components/CodexSanctum/CodexHeatstreamViewer';
+import CodexTemporalInfusion from '../components/CodexSanctum/CodexTemporalInfusion';
+import CodexTetherMatrix from '../components/CodexSanctum/CodexTetherMatrix';
+import CodexLorePulseTracer from '../components/CodexSanctum/CodexLorePulseTracer';
+import CodexSanctumLoreRibbon from '../components/CodexSanctum/CodexSanctumLoreRibbon';
+import VersePulseEmitter from '../components/CodexSanctum/VersePulseEmitter';
+import LorePulseRibbon from '../components/CodexSanctum/LorePulseRibbon';
 
 export default function CodexPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col items-center overflow-x-hidden">
       <BranchHeader />
 
       <motion.h1
@@ -21,19 +28,23 @@ export default function CodexPage() {
       </motion.h1>
 
       <motion.p
-        className="text-lg text-gray-300 max-w-2xl text-center mb-10"
+        className="text-gray-400 max-w-2xl text-center text-lg mb-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.7 }}
+        transition={{ delay: 0.2 }}
       >
-        Explore lineage-based argument trails, identify lore changes across time, and navigate
-        through temporal codex echoes.
+        Explore archived debate lore, logic timelines, and historical infusions of insight.
       </motion.p>
 
-      <div className="flex flex-col items-center space-y-8 mb-12">
-        {/* <CodexArcLineageViewer /> */}
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 px-6 pb-16">
+        <CodexHeatstreamViewer />
+        <CodexTemporalInfusion />
+        <CodexTetherMatrix />
+        <CodexLorePulseTracer />
+        <CodexSanctumLoreRibbon />
         <CodexLoreDiffViewer />
-        {/* <CodexTemporalScroll /> */}
+        <LorePulseRibbon />
+        <VersePulseEmitter />
       </div>
 
       <BranchFooter />

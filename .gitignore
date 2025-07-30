@@ -1,0 +1,30 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite build output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Vercel & IDE files
+.vscode/
+.env
+.next/
+.vercel/
+
+# Build cache
+.cache/
+*.tsbuildinfo
+
+# Mac system file
+Icon?
+.vercel

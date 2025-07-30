@@ -6,7 +6,30 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@': path.resolve(__dirname, 'src/assets'),
+    },
+  },
+  assetsInclude: ['**/*.glb', '**/*.gltf', '**/*.webp'],
+  server: {
+    fs: {
+      strict: false,
+    },
+    mimeTypes: {
+      '.glb': 'model/gltf-binary',
+      '.gltf': 'model/gltf+json',
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          const ext = path.extname(assetInfo.name ?? '');
+          if (ext === '.glb') {
+            return 'assets/[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
     },
   },
 });

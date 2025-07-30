@@ -1,5 +1,5 @@
 import React from 'react';
-import SentinelGate from '../components/SentinelGate';
+import SentinelGate from '../components/SentinelGate/SentinelGateDoors';
 
 const EntryPage = () => {
   return (

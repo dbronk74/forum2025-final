@@ -29,6 +29,11 @@ export default function HomePage() {
       image: '/images/roundtable/roundtable-banner.jpg',
       link: '/roundtable',
     },
+    {
+      name: '🚪 Sentinel Gate (Entry)',
+      image: '/images/entry/entry-sentinels-glow.png',
+      link: '/sentinelgate',
+    },
   ];
 
   return (

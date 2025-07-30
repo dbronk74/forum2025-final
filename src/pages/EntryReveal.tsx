@@ -1,12 +1,11 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import SentinelEyes from '../components/SentinelEyes';
-import MoralOverlay from '../components/MoralOverlay';
-import SentinelGateDoors from '../components/SentinelGateDoors';
-import AmbientChime from '../components/AmbientChime';
+import SentinelEyes from '../components/SentinelGate/SentinelEyes';
+import MoralOverlay from '../components/SentinelGate/MoralOverlay';
+import SentinelGateDoors from '../components/SentinelGate/SentinelGateDoors';
+import AmbientChime from '../components/SentinelGate/AmbientChime';
 
 const LandingContainer = styled.div`
   position: relative;
