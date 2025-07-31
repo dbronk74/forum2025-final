@@ -50,7 +50,7 @@ function App() {
 
       <Routes>
         {/* Entry paths */}
-        <Route path="/" element={<SentinelGate />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/entry" element={<SentinelGate />} />
         <Route path="/gate" element={<SentinelGate />} />
         <Route path="/entry-page" element={<EntryPage />} />
