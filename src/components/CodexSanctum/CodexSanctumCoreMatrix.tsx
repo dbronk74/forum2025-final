@@ -12,7 +12,7 @@ const CodexSanctumCoreMatrix: React.FC = () => {
       <h2 className="text-2xl font-bold text-purple-300 text-center mb-4">Codex Sanctum Core Matrix</h2>
 
       <div className="grid grid-cols-6 gap-3 justify-center items-center">
-        {hexGrid.map((_, index) => (
+        {(hexGrid ?? []).map((_, index) => (
           <motion.div
             key={index}
             className="flex items-center justify-center w-12 h-12 bg-purple-700/10 border border-purple-500 rounded-full shadow-inner hover:bg-purple-600/20 transition"

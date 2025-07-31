@@ -18,7 +18,7 @@ export default function CodexTetherLines() {
     <div className="relative w-full h-[400px] bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-inner overflow-hidden">
       <h3 className="text-white text-center py-4 text-lg font-semibold">Codex Tether Lines</h3>
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
-        {mockTethers.map((tether, i) => {
+        {(mockTethers ?? []).map((tether, i) => {
           const x1 = 80 + i * 90;
           const y1 = 100;
           const x2 = 320 - i * 70;

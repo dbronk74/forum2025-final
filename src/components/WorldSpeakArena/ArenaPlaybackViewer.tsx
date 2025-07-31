@@ -20,7 +20,7 @@ const ArenaPlaybackViewer: React.FC = () => {
     <div className="bg-zinc-800 p-4 rounded-lg shadow w-full max-w-3xl mx-auto">
       <h2 className="text-xl text-white font-bold mb-4">Playback Viewer</h2>
       <div className="space-y-3">
-        {sampleSegments.map((segment, index) => (
+        {(sampleSegments ?? []).map((segment, index) => (
           <motion.div
             key={index}
             className={`p-3 rounded transition-all duration-300 ${

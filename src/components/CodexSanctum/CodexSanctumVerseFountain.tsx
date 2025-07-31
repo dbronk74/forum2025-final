@@ -64,7 +64,7 @@ const CodexSanctumVerseFountain: React.FC = () => {
       ref={containerRef}
       className="relative w-full h-64 overflow-hidden bg-gradient-to-b from-black via-zinc-900 to-zinc-800 border border-purple-700 rounded-xl shadow-inner"
     >
-      {verses.map(verse => (
+      {(verses ?? []).map(verse => (
         <div
           key={verse.id}
           className="absolute text-purple-300 text-sm font-mono pointer-events-none"

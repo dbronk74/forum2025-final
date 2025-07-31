@@ -43,7 +43,7 @@ const NarrativeDecoder: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-3 gap-4 mb-6">
-        {narrativeLayers.map(layer => (
+        {(narrativeLayers ?? []).map(layer => (
           <motion.button
             key={layer.id}
             whileHover={{ scale: 1.05 }}

@@ -20,7 +20,7 @@ const BranchHeader: React.FC = () => {
       </div>
 
       <nav className="flex gap-4">
-        {navItems.map(({ label, path, hoverClass, activeClass }) => {
+        {(navItems ?? []).map(({ label, path, hoverClass, activeClass }) => {
           const isActive = location.pathname === path;
           return (
             <Link

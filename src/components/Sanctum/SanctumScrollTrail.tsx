@@ -22,7 +22,7 @@ const SanctumScrollTrail: React.FC = () => {
         Sanctum Scroll Trail
       </motion.h2>
       <div className="space-y-3">
-        {trailData.map((entry, index) => (
+        {(trailData ?? []).map((entry, index) => (
           <motion.div
             key={index}
             className="px-4 py-2 bg-zinc-700 rounded-lg shadow-inner"

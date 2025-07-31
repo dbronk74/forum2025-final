@@ -18,7 +18,7 @@ export default function CodexSymbolicCompass() {
       <h2 className="text-center text-indigo-300 text-lg font-bold mt-4">Symbolic Compass</h2>
 
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 200">
-        {points.map((point, idx) => {
+        {(points ?? []).map((point, idx) => {
           const x = 100 + radius * Math.cos((point.angle * Math.PI) / 180);
           const y = 100 + radius * Math.sin((point.angle * Math.PI) / 180);
           return (

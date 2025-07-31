@@ -22,7 +22,7 @@ export default function CodexSignalMap() {
       </motion.h2>
 
       <div className="relative w-full h-full">
-        {signals.map((s, idx) => (
+        {(signals ?? []).map((s, idx) => (
           <motion.div
             key={idx}
             className="absolute px-3 py-1 text-xs bg-indigo-400/90 text-white rounded-full shadow-md backdrop-blur-sm cursor-pointer"

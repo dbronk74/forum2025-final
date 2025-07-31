@@ -41,7 +41,7 @@ const ChronoMapChamber: React.FC = () => {
       </h2>
 
       <div className="space-y-4">
-        {mockTimeline.map((entry, index) => (
+        {(mockTimeline ?? []).map((entry, index) => (
           <div
             key={index}
             className={`p-4 rounded-lg border transition-all ${getStyleForType(entry.type)}`}

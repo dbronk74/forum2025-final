@@ -47,7 +47,7 @@ const ConflictConvergenceMap: React.FC<ConflictConvergenceMapProps> = ({
       {/* Label */}
       <div className="absolute inset-0 flex items-center justify-center text-white font-medium tracking-wide z-10">
         {overlap > 20
-          ? `Common Ground Forming (${overlap.toFixed(0)}%)`
+          ? `Common Ground Forming (${(overlap ?? 0).toFixed(0)}%)`
           : divergence < 20
           ? `Near Convergence`
           : `Ideological Conflict`}

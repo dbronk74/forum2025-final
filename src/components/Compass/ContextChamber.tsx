@@ -19,7 +19,7 @@ const ContextChamber: React.FC = () => {
       </h2>
 
       <div className="space-y-4">
-        {contextLayers.map((layer, i) => (
+        {(contextLayers ?? []).map((layer, i) => (
           <motion.div
             key={layer.label}
             className={`cursor-pointer rounded-lg p-4 shadow-md border border-indigo-700 ${

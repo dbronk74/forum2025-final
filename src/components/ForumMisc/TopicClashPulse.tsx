@@ -34,7 +34,7 @@ export default function TopicClashPulse() {
 
       <div className="space-y-3">
         <AnimatePresence>
-          {pulses.map((pulse) => (
+          {(pulses ?? []).map((pulse) => (
             <motion.div
               key={pulse.id}
               initial={{ opacity: 0, x: -10 }}

@@ -15,7 +15,7 @@ const CompassThemeWheel: React.FC = () => {
     <div className="relative flex flex-col items-center justify-center p-10 text-white rounded-2xl bg-slate-950 shadow-lg border border-slate-800 max-w-lg mx-auto">
       <h2 className="text-2xl font-bold mb-6 tracking-wide text-center">Compass Theme Wheel</h2>
       <div className="grid grid-cols-2 gap-6">
-        {themes.map((theme, index) => (
+        {(themes ?? []).map((theme, index) => (
           <motion.div
             key={index}
             className={`flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br ${theme.color} hover:scale-105 transition transform duration-300`}

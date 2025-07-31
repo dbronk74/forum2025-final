@@ -25,7 +25,7 @@ export default function HUDWheelOverlay() {
 
       {open && (
         <div className="relative w-48 h-48 mt-4">
-          {tools.map((tool, idx) => {
+          {(tools ?? []).map((tool, idx) => {
             const angle = (360 / tools.length) * idx - 90;
             const radius = 80;
             const x = radius * Math.cos((angle * Math.PI) / 180);

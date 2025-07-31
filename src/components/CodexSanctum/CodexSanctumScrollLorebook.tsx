@@ -19,7 +19,7 @@ const CodexSanctumScrollLorebook: React.FC = () => {
     >
       <h2 className="text-xl font-bold text-purple-300 mb-4">Codex Scroll Lorebook</h2>
       <div className="space-y-4 text-sm text-purple-200 font-serif">
-        {lorePassages.map((line, index) => (
+        {(lorePassages ?? []).map((line, index) => (
           <motion.p
             key={index}
             initial={{ opacity: 0, x: -20 }}

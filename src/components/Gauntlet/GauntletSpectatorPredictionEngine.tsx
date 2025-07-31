@@ -26,7 +26,7 @@ const GauntletSpectatorPredictionEngine: React.FC = () => {
   return (
     <div className="w-full p-4 bg-zinc-900 border border-zinc-700 rounded-xl shadow-lg text-white">
       <h2 className="text-lg font-bold mb-4 text-center">Spectator Prediction Engine</h2>
-      {participants.map((participant) => {
+      {(participants ?? []).map((participant) => {
         const percent = getPercentage(participant.id);
         return (
           <div key={participant.id} className="mb-3">

@@ -46,7 +46,7 @@ const GauntletLoreLinker: React.FC = () => {
       <h2 className="text-purple-300 text-xl font-bold mb-4">🔗 Lore Linker</h2>
 
       <div className="grid grid-cols-2 gap-4">
-        {mockLoreEntries.map((entry) => (
+        {(mockLoreEntries ?? []).map((entry) => (
           <div
             key={entry.id}
             onClick={() => toggleSelect(entry.id)}
@@ -78,7 +78,7 @@ const GauntletLoreLinker: React.FC = () => {
         <div className="mt-6">
           <h3 className="text-purple-200 font-semibold mb-2">Linked Lore Threads:</h3>
           <ul className="text-sm text-zinc-300 list-disc pl-5 space-y-1">
-            {links.map(([id1, id2], index) => (
+            {(links ?? []).map(([id1, id2], index) => (
               <li key={index}>
                 <strong>{getTitleById(id1)}</strong> ↔ <strong>{getTitleById(id2)}</strong>
               </li>

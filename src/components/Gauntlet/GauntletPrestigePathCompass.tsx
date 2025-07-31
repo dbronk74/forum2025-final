@@ -18,7 +18,7 @@ const GauntletPrestigePathCompass: React.FC<GauntletPrestigePathCompassProps> = 
 
   return (
     <div className="relative w-40 h-40 rounded-full border-4 border-purple-600 shadow-lg flex items-center justify-center">
-      {levels.map((stage, index) => {
+      {(levels ?? []).map((stage, index) => {
         const angle = (360 / levels.length) * index;
         const rotate = `rotate(${angle}deg) translate(65px) rotate(-${angle}deg)`;
         const isActive = index === activeIndex;

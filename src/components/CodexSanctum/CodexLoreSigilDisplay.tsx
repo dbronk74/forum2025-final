@@ -34,7 +34,7 @@ const CodexLoreSigilDisplay: React.FC = () => {
     <div className="relative bg-gradient-to-br from-purple-800 to-indigo-900 text-white rounded-lg p-4 shadow-md h-40 overflow-hidden">
       <h2 className="text-xl font-semibold mb-2">Codex Sigils in Resonance</h2>
       <div className="flex gap-4 flex-wrap items-center justify-start">
-        {visibleSigils.map((sigil) => (
+        {(visibleSigils ?? []).map((sigil) => (
           <motion.div
             key={sigil.id}
             initial={{ opacity: 0, scale: 0.5, rotate: -15 }}

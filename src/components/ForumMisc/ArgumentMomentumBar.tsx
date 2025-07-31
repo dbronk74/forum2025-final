@@ -39,7 +39,7 @@ const ArgumentMomentumBar: React.FC<ArgumentMomentumBarProps> = ({
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         />
         <div className="absolute w-full h-full flex items-center justify-center z-10 text-white text-sm font-bold drop-shadow">
-          {leftPercent.toFixed(1)}% / {rightPercent.toFixed(1)}%
+          {(leftPercent ?? 0).toFixed(1)}% / {(rightPercent ?? 0).toFixed(1)}%
         </div>
       </div>
     </div>

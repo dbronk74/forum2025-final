@@ -17,7 +17,7 @@ const DebateCompassWheel: React.FC = () => {
       <Compass className="w-10 h-10 text-cyan-300 mb-3" />
       <div className="text-lg font-semibold mb-2">Debate Compass</div>
       <div className="grid grid-cols-2 gap-4 text-xs text-center">
-        {directions.map((dir, idx) => (
+        {(directions ?? []).map((dir, idx) => (
           <div key={idx} className="text-cyan-200">
             {dir}
           </div>

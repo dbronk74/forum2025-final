@@ -14,7 +14,7 @@ const CompassDebateTracker: React.FC = () => {
     <div className="bg-slate-950 text-white rounded-xl shadow-md p-8 border border-slate-800 max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold text-center mb-6 tracking-wide">Compass Debate Tracker</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {debateStats.map((item, index) => (
+        {(debateStats ?? []).map((item, index) => (
           <motion.div
             key={index}
             className="flex items-center gap-4 p-5 bg-slate-800 rounded-lg hover:bg-slate-700 transition"

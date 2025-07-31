@@ -34,7 +34,7 @@ const rationaleData: Rationale[] = [
 const CouncilRationaleGrid: React.FC = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-gradient-to-br from-indigo-950 via-indigo-900 to-indigo-950 rounded-lg shadow-lg border border-indigo-700">
-      {rationaleData.map((rationale, index) => (
+      {(rationaleData ?? []).map((rationale, index) => (
         <motion.div
           key={index}
           className="bg-indigo-800/70 p-4 rounded-md border border-indigo-600 hover:border-indigo-400 transition-colors"

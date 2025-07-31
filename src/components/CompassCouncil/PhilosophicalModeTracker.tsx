@@ -28,7 +28,7 @@ const PhilosophicalModeTracker: React.FC<PhilosophicalModeTrackerProps> = ({ mod
         <h2 className="text-xl font-semibold">Philosophical Modes</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {modes.map((entry, idx) => (
+        {(modes ?? []).map((entry, idx) => (
           <motion.div
             key={idx}
             className="p-4 rounded-xl border border-slate-700 shadow-inner"

@@ -10,7 +10,7 @@ const GauntletDebateCompass: React.FC = () => {
       <div className="absolute inset-0 rounded-full border-4 border-purple-600 shadow-[0_0_20px_rgba(128,90,213,0.5)] animate-pulse" />
 
       {/* Direction Labels */}
-      {directions.map((dir, i) => {
+      {(directions ?? []).map((dir, i) => {
         const angle = (2 * Math.PI * i) / directions.length;
         const x = 128 + 100 * Math.cos(angle);
         const y = 128 + 100 * Math.sin(angle);

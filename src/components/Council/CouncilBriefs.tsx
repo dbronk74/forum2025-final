@@ -30,7 +30,7 @@ const CouncilBriefs: React.FC = () => {
     <div className="bg-slate-950 text-white rounded-xl shadow-lg border border-slate-800 p-8 max-w-5xl mx-auto">
       <h2 className="text-2xl font-bold text-center mb-6 tracking-wide">Council Briefs</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {briefs.map((brief, index) => (
+        {(briefs ?? []).map((brief, index) => (
           <motion.div
             key={index}
             className="bg-slate-800 p-5 rounded-lg flex flex-col gap-2 hover:bg-slate-700 transition"

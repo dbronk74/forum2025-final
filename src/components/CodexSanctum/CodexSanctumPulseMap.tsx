@@ -21,7 +21,7 @@ const CodexSanctumPulseMap: React.FC = () => {
       </p>
 
       <div className="relative w-full h-64 bg-zinc-950 rounded-lg overflow-hidden border border-purple-900">
-        {pulseCoordinates.map((pulse, index) => (
+        {(pulseCoordinates ?? []).map((pulse, index) => (
           <motion.div
             key={index}
             className="absolute w-4 h-4 rounded-full bg-purple-400 shadow-lg"

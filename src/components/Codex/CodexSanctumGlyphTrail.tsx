@@ -8,7 +8,7 @@ export default function CodexSanctumGlyphTrail() {
     <div className="w-full max-w-4xl mx-auto p-6 bg-black bg-opacity-70 rounded-xl shadow-lg text-white">
       <h2 className="text-2xl font-bold text-center text-indigo-400 mb-4">Sanctum Glyph Trail</h2>
       <div className="flex flex-wrap justify-center gap-4">
-        {glyphs.map((glyph, idx) => (
+        {(glyphs ?? []).map((glyph, idx) => (
           <motion.div
             key={idx}
             className="text-3xl p-4 rounded-full bg-gradient-to-br from-purple-700 via-indigo-600 to-blue-500 shadow-inner border border-indigo-400"

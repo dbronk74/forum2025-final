@@ -20,7 +20,7 @@ const MonetizationHUD: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
     >
       <div className="text-center text-lime-300 font-bold mb-1">💼 Monetization</div>
-      {shortcuts.map((item, index) => (
+      {(shortcuts ?? []).map((item, index) => (
         <button
           key={index}
           className="w-full flex items-center gap-2 px-3 py-1 hover:bg-lime-800/50 rounded-md text-sm transition"

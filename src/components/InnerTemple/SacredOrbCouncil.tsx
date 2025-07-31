@@ -16,7 +16,7 @@ const SacredOrbCouncil: React.FC = () => {
     <div className="relative max-w-4xl mx-auto p-8 bg-gradient-to-tr from-purple-900 via-indigo-900 to-black rounded-3xl shadow-2xl text-white text-center select-none">
       <h2 className="text-3xl font-extrabold mb-8">Sacred Orb Council</h2>
       <div className="flex justify-center flex-wrap gap-10">
-        {councilMembers.map(({ id, name, color }) => (
+        {(councilMembers ?? []).map(({ id, name, color }) => (
           <motion.div
             key={id}
             className="w-28 h-28 rounded-full flex flex-col items-center justify-center cursor-default"

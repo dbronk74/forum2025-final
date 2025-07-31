@@ -47,7 +47,7 @@ const GauntletFabledTrialEchoes: React.FC = () => {
         <Sparkles className="w-5 h-5 animate-pulse" /> Fabled Trial Echoes
       </h2>
       <div className="space-y-5">
-        {fabledTrials.map((trial) => (
+        {(fabledTrials ?? []).map((trial) => (
           <motion.div
             key={trial.id}
             initial={{ opacity: 0, y: 20 }}

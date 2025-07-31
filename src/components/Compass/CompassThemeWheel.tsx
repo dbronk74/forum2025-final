@@ -24,7 +24,7 @@ const CompassThemeWheel: React.FC = () => {
 
   return (
     <div className="relative w-[300px] h-[300px] mx-auto">
-      {themes.map((theme, i) => {
+      {(themes ?? []).map((theme, i) => {
         const angle = i * angleStep - Math.PI / 2;
         const x = radius * Math.cos(angle);
         const y = radius * Math.sin(angle);

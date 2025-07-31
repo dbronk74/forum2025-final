@@ -12,7 +12,7 @@ const CodexSanctumPulseGrid: React.FC = () => {
       </p>
 
       <div className="grid grid-cols-5 gap-4 p-2">
-        {pulses.map((i) => (
+        {(pulses ?? []).map((i) => (
           <motion.div
             key={i}
             className="h-6 w-6 rounded-full bg-purple-400 opacity-70"

@@ -34,7 +34,7 @@ const CouncilLoreTrail: React.FC = () => {
     <div className="relative w-full max-w-md mx-auto px-4 py-8">
       <h2 className="text-xl font-bold text-center text-indigo-300 mb-6">Council Lore Trail</h2>
       <div className="border-l-2 border-indigo-600 pl-4 space-y-6">
-        {mockLoreTrail.map((entry, index) => (
+        {(mockLoreTrail ?? []).map((entry, index) => (
           <motion.div
             key={entry.id}
             initial={{ opacity: 0, x: -20 }}

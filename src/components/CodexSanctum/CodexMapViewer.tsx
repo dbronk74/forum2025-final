@@ -41,7 +41,7 @@ const CodexMapViewer: React.FC = () => {
       <h2 className="text-2xl font-bold text-purple-300 mb-4 text-center">Codex Map Viewer</h2>
 
       <div className="relative w-full h-full border border-zinc-700 rounded bg-zinc-800">
-        {mockRegions.map((region) => (
+        {(mockRegions ?? []).map((region) => (
           <motion.div
             key={region.id}
             className="absolute w-5 h-5 bg-purple-500 rounded-full cursor-pointer hover:scale-125 transition-all"

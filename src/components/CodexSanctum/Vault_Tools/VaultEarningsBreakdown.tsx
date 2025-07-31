@@ -13,7 +13,7 @@ export default function VaultEarningsBreakdown() {
     <div className="bg-zinc-900 border border-emerald-700 rounded-xl p-5 shadow-lg text-white max-w-md w-full mx-auto mt-6">
       <h3 className="text-lg font-bold text-emerald-400 mb-4">Earnings Breakdown</h3>
       <ul className="space-y-3">
-        {earnings.map((entry, idx) => (
+        {(earnings ?? []).map((entry, idx) => (
           <motion.li
             key={idx}
             className="flex justify-between items-center text-sm"

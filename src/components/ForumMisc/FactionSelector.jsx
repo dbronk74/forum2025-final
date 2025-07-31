@@ -15,7 +15,7 @@ export default function FactionSelector() {
     <div className="w-full max-w-lg mx-auto text-center mt-10">
       <h2 className="text-xl font-bold text-white mb-4">Choose Your Faction</h2>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {factions.map((faction, idx) => (
+        {(factions ?? []).map((faction, idx) => (
           <motion.div
             key={faction.name}
             onClick={() => setSelected(faction.name)}

@@ -30,7 +30,7 @@ const CompassSignalInterpreter: React.FC = () => {
     <div className="bg-zinc-900 border border-zinc-700 p-4 rounded-lg w-full max-w-xl mx-auto shadow-md">
       <h3 className="text-lg font-semibold text-zinc-100 mb-3">Signal Interpreter</h3>
       <div className="space-y-3">
-        {signals.map((signal, index) => (
+        {(signals ?? []).map((signal, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}

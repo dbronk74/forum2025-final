@@ -29,7 +29,7 @@ const ChronoMapChamber: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 to-black p-8 rounded-xl text-white shadow-lg border border-slate-800 max-w-5xl mx-auto">
       <h2 className="text-2xl font-semibold text-center mb-6 tracking-wider">Chrono Map Chamber</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {timelineNodes.map((node, index) => (
+        {(timelineNodes ?? []).map((node, index) => (
           <motion.div
             key={index}
             className="flex items-center space-x-4 p-5 bg-slate-800 rounded-lg hover:bg-slate-700 transition"

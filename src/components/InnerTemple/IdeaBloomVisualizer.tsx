@@ -46,7 +46,7 @@ const IdeaBloomVisualizer: React.FC = () => {
   return (
     <div className="relative w-full h-64 bg-zinc-900 rounded-lg shadow-inner overflow-hidden">
       <AnimatePresence>
-        {ideas.map(({ id, text, x, y, scale, color }) => (
+        {(ideas ?? []).map(({ id, text, x, y, scale, color }) => (
           <motion.div
             key={id}
             initial={{ opacity: 0, scale: 0 }}

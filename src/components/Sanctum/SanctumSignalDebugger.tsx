@@ -13,7 +13,7 @@ const SanctumSignalDebugger: React.FC = () => {
   const [log, setLog] = useState<string[]>([]);
 
   const runDiagnostics = () => {
-    const newLog = debugSignals.map(signal =>
+    const newLog = (debugSignals ?? []).map(signal =>
       `[${signal.label}] → Status: ${signal.status}`
     );
     setLog(newLog);
@@ -37,7 +37,7 @@ const SanctumSignalDebugger: React.FC = () => {
         {log.length === 0 ? (
           <p className="text-slate-400">No diagnostics run yet.</p>
         ) : (
-          log.map((entry, idx) => <p key={idx}>{entry}</p>)
+          (log ?? []).map((entry, idx) => <p key={idx}>{entry}</p>)
         )}
       </div>
     </motion.div>

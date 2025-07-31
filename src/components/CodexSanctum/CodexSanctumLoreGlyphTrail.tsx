@@ -15,7 +15,7 @@ const CodexSanctumLoreGlyphTrail: React.FC = () => {
       </p>
 
       <div className="grid grid-cols-7 gap-4">
-        {glyphs.map((_, i) => (
+        {(glyphs ?? []).map((_, i) => (
           <motion.div
             key={i}
             className="h-16 w-16 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-800 shadow-inner border border-purple-500 flex items-center justify-center text-white text-xl font-bold"

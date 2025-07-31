@@ -31,7 +31,7 @@ export default function CodexArchiveViewer() {
 
       <div className="space-y-4 max-h-80 overflow-y-auto pr-1">
         {filtered.length > 0 ? (
-          filtered.map((entry, idx) => (
+          (filtered ?? []).map((entry, idx) => (
             <motion.div
               key={idx}
               className="border-l-4 border-indigo-500 pl-4"

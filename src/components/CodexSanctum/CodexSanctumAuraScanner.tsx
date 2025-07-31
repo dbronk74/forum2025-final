@@ -19,7 +19,7 @@ const CodexSanctumAuraScanner: React.FC = () => {
     <div className="relative bg-gradient-to-br from-indigo-900 to-purple-950 border border-violet-700 rounded-xl p-6 text-white w-full max-w-xl mx-auto h-72 shadow-lg overflow-hidden">
       <h2 className="text-xl font-semibold mb-4 text-violet-300 text-center">Codex Sanctum Aura Scanner</h2>
       <div className="relative w-full h-full flex items-center justify-center">
-        {auras.map((aura, index) => (
+        {(auras ?? []).map((aura, index) => (
           <motion.div
             key={aura}
             className="absolute rounded-full border border-violet-500"

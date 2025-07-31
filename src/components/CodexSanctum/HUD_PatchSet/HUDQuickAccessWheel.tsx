@@ -18,7 +18,7 @@ export default function HUDQuickAccessWheel() {
     <div className="fixed top-8 right-8 w-64 h-64 z-50">
       <div className="relative w-full h-full rounded-full bg-gradient-to-br from-zinc-900 via-black to-zinc-800 border border-indigo-700 shadow-lg">
         {/* Radial buttons */}
-        {tools.map((tool, index) => {
+        {(tools ?? []).map((tool, index) => {
           const angleRad = (tool.angle * Math.PI) / 180;
           const x = center + radius * Math.cos(angleRad) - 20;
           const y = center + radius * Math.sin(angleRad) - 20;

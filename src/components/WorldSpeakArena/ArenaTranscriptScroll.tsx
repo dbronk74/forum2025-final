@@ -16,7 +16,7 @@ const ArenaTranscriptScroll: React.FC<ArenaTranscriptScrollProps> = ({ transcrip
       {transcript.length === 0 ? (
         <p className="italic text-gray-400">Transcript will appear here in real time...</p>
       ) : (
-        transcript.map((entry, index) => (
+        (transcript ?? []).map((entry, index) => (
           <div key={index} className="flex flex-col border-l-2 border-cyan-400 pl-3">
             <span className="text-cyan-300 font-bold">{entry.speaker}</span>
             <span className="text-gray-200">{entry.text}</span>

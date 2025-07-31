@@ -14,7 +14,7 @@ const CompassChamberMap: React.FC = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-1">
-        {quadrantLabels.map((label, index) => (
+        {(quadrantLabels ?? []).map((label, index) => (
           <div
             key={label}
             className={`relative flex items-center justify-center bg-gradient-to-br ${quadrantColors[index]} to-black border border-slate-700 rounded-md`}

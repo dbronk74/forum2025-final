@@ -39,7 +39,7 @@ const PathwaysPanel: React.FC = () => {
         <h2 className="text-2xl font-semibold text-indigo-100">Philosophical Pathways</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {paths.map((path, idx) => (
+        {(paths ?? []).map((path, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 20 }}

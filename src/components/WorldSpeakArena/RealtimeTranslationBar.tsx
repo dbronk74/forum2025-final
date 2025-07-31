@@ -9,7 +9,7 @@ const RealtimeTranslationBar: React.FC = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-black/70 text-white p-2 z-40 flex flex-col md:flex-row md:justify-around gap-2 text-sm">
-      {translations.map((t, idx) => (
+      {(translations ?? []).map((t, idx) => (
         <div key={idx} className="truncate">
           <strong>{t.lang}:</strong> {t.text}
         </div>

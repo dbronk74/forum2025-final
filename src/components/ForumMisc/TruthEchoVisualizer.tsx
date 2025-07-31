@@ -48,7 +48,7 @@ export default function TruthEchoVisualizer() {
       </div>
 
       <div className="text-right text-green-400 text-xs font-bold">
-        Resonance: {echo.resonanceLevel.toFixed(1)}%
+        Resonance: {(echo.resonanceLevel ?? 0).toFixed(1)}%
       </div>
 
       <motion.div

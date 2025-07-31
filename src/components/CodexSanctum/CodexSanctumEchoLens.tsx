@@ -32,7 +32,7 @@ const CodexSanctumEchoLens: React.FC = () => {
       <h2 className="text-center text-indigo-300 text-xl font-bold mb-2">Codex Sanctum Echo Lens</h2>
       <div className="relative w-full h-full bg-black rounded-lg overflow-hidden">
         <AnimatePresence>
-          {pulses.map(pulse => (
+          {(pulses ?? []).map(pulse => (
             <motion.div
               key={pulse.id}
               className="absolute bg-indigo-400/30 rounded-full border border-indigo-500 shadow-lg"

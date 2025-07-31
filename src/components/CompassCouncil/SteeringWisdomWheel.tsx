@@ -37,7 +37,7 @@ const SteeringWisdomWheel: React.FC = () => {
         initial="initial"
         animate="animate"
       >
-        {wisdomElements.map((element, index) => (
+        {(wisdomElements ?? []).map((element, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center justify-center p-6 bg-slate-800 rounded-xl hover:bg-slate-700 transition duration-300 ease-in-out"

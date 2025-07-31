@@ -18,7 +18,7 @@ const ConflictRippleScanner = ({ trigger = false }) => {
   return (
     <div className="absolute inset-0 pointer-events-none z-30">
       <AnimatePresence>
-        {ripples.map((id) => (
+        {(ripples ?? []).map((id) => (
           <motion.div
             key={id}
             className="absolute inset-0 rounded-full border-4 border-red-500"

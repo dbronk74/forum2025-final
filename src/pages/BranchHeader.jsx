@@ -20,7 +20,7 @@ export default function BranchHeader() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {navItems.map((item) => {
+      {(navItems ?? []).map((item) => {
         const isActive = location.pathname === item.path;
         return (
           <Link

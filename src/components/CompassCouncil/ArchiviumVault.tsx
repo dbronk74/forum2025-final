@@ -31,7 +31,7 @@ const ArchiviumVault: React.FC = () => {
       </h2>
 
       <ul className="space-y-4">
-        {mockVaultEntries.map((entry) => (
+        {(mockVaultEntries ?? []).map((entry) => (
           <li
             key={entry.id}
             className={`border rounded-lg p-4 transition-all ${

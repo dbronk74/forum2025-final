@@ -40,7 +40,7 @@ export default function VeracityPulse() {
       </div>
 
       <div className="text-right text-sm text-emerald-300 font-mono">
-        {pulse.toFixed(0)}%
+        {(pulse ?? 0).toFixed(0)}%
       </div>
 
       <motion.div

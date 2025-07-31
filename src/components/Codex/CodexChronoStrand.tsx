@@ -30,7 +30,7 @@ export default function CodexChronoStrand() {
     <div className="relative w-full max-w-3xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold text-center text-indigo-300 mb-8">ChronoStrand</h2>
       <div className="border-l-2 border-indigo-600 pl-6 relative">
-        {events.map((event, idx) => (
+        {(events ?? []).map((event, idx) => (
           <motion.div
             key={idx}
             className="mb-10 relative"

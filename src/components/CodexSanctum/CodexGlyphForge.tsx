@@ -18,7 +18,7 @@ export default function CodexGlyphForge() {
         <div>
           <h3 className="text-lg font-semibold text-purple-400 mb-2">Base Fragments</h3>
           <div className="flex flex-wrap gap-3">
-            {baseFragments.map((frag, idx) => (
+            {(baseFragments ?? []).map((frag, idx) => (
               <motion.button
                 key={idx}
                 onClick={() => setBase(frag)}
@@ -36,7 +36,7 @@ export default function CodexGlyphForge() {
         <div>
           <h3 className="text-lg font-semibold text-purple-400 mb-2">Overlay Sigils</h3>
           <div className="flex flex-wrap gap-3">
-            {overlays.map((sigil, idx) => (
+            {(overlays ?? []).map((sigil, idx) => (
               <motion.button
                 key={idx}
                 onClick={() => setOverlay(sigil)}

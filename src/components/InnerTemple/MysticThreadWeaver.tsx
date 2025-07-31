@@ -37,7 +37,7 @@ const MysticThreadWeaver: React.FC = () => {
 
   return (
     <div className="relative w-full h-64 bg-gradient-to-br from-purple-900 to-indigo-900 rounded-lg shadow-lg overflow-hidden select-none">
-      {threads.map(({ id, label, x, y, opacity }) => (
+      {(threads ?? []).map(({ id, label, x, y, opacity }) => (
         <div
           key={id}
           className="absolute text-white text-xs font-medium"

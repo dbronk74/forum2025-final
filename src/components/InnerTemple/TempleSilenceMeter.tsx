@@ -32,7 +32,7 @@ const TempleSilenceMeter: React.FC<TempleSilenceMeterProps> = ({ initialLevel = 
         />
       </div>
       <p className="text-sm text-indigo-300">
-        Silence Level: {silenceLevel.toFixed(0)}%
+        Silence Level: {(silenceLevel ?? 0).toFixed(0)}%
       </p>
     </div>
   );

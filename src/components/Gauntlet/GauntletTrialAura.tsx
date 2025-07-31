@@ -11,7 +11,7 @@ const GauntletTrialAura: React.FC = () => {
 
   return (
     <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-      {participants.map((participant, index) => (
+      {(participants ?? []).map((participant, index) => (
         <motion.div
           key={participant.id}
           className={clsx(

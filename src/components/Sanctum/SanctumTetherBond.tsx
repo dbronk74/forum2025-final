@@ -12,7 +12,7 @@ const SanctumTetherBond: React.FC = () => {
     <div className="bg-gray-950 p-5 rounded-xl border border-indigo-800 max-w-md shadow-lg">
       <h2 className="text-indigo-300 font-bold text-lg mb-4">🔗 Tether Bonds</h2>
       <div className="space-y-4">
-        {connections.map((bond, idx) => (
+        {(connections ?? []).map((bond, idx) => (
           <motion.div
             key={idx}
             className="flex justify-between items-center px-4 py-2 rounded-lg bg-indigo-900 bg-opacity-30 border border-indigo-500"

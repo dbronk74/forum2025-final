@@ -42,7 +42,7 @@ const GauntletSpectatorFlare: React.FC = () => {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-40">
       <AnimatePresence>
-        {flares.map((flare) => (
+        {(flares ?? []).map((flare) => (
           <motion.div
             key={flare.id}
             initial={{ scale: 0, opacity: 1 }}

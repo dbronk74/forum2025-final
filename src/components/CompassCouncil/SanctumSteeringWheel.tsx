@@ -47,7 +47,7 @@ const SanctumSteeringWheel: React.FC = () => {
 
   return (
     <div className="relative w-64 h-64 mx-auto rounded-full border-4 border-slate-700 bg-slate-900 shadow-2xl flex items-center justify-center">
-      {sanctumOptions.map((option, index) => {
+      {(sanctumOptions ?? []).map((option, index) => {
         const angle = (360 / sanctumOptions.length) * index;
         const radius = 100;
         const x = radius * Math.cos((angle * Math.PI) / 180);

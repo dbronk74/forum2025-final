@@ -35,7 +35,7 @@ const GauntletWanderingEchoes: React.FC = () => {
 
   return (
     <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
-      {echoes.current.map((echo, i) => (
+      {(echoes.current ?? []).map((echo, i) => (
         <motion.div
           key={echo.id}
           custom={i}

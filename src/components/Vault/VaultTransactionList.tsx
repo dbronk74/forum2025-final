@@ -21,7 +21,7 @@ const VaultTransactionList: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((t, index) => (
+          {(transactions ?? []).map((t, index) => (
             <tr key={index} className="border-b border-zinc-800">
               <td className="py-2">{t.date}</td>
               <td className="py-2">{t.type}</td>

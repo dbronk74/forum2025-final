@@ -19,7 +19,7 @@ const ArchiviumVault: React.FC = () => {
     <div className="bg-slate-950 text-white rounded-xl p-8 shadow-lg border border-slate-800 max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold mb-6 text-center tracking-wide">Archivium Vault</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {archiveItems.map((item, idx) => (
+        {(archiveItems ?? []).map((item, idx) => (
           <motion.div
             key={idx}
             className="bg-slate-800 rounded-lg p-5 flex items-center gap-4 hover:bg-slate-700 transition duration-300"

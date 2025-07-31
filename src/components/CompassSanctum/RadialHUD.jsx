@@ -28,7 +28,7 @@ export default function RadialHUD() {
           animate={{ scale: 1 }}
           className="absolute inset-0 w-44 h-44 -top-24 -left-24 pointer-events-none"
         >
-          {items.map((item, index) => {
+          {(items ?? []).map((item, index) => {
             const angle = (index / items.length) * Math.PI * 2;
             const x = 70 * Math.cos(angle);
             const y = 70 * Math.sin(angle);

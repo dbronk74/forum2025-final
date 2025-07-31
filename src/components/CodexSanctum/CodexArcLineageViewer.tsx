@@ -22,7 +22,7 @@ export default function CodexArcLineageViewer() {
     <div className="bg-gradient-to-b from-gray-900 via-slate-800 to-black p-6 rounded-xl shadow-lg text-white max-w-xl mx-auto">
       <h2 className="text-2xl font-bold mb-4 text-purple-300">Arc Lineage</h2>
       <div className="space-y-2">
-        {mockLineageData.map((node) => (
+        {(mockLineageData ?? []).map((node) => (
           <motion.div
             key={node.id}
             className={`border-l-4 border-purple-600 pl-4 ${getIndent(node.depth)}`}

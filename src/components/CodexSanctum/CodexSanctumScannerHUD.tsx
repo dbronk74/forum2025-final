@@ -28,13 +28,13 @@ const CodexSanctumScannerHUD: React.FC = () => {
         <motion.div
           className="absolute left-0 top-0 h-full bg-purple-400"
           initial={{ width: '0%' }}
-          animate={{ width: `${scanValue.toFixed(1)}%` }}
+          animate={{ width: `${(scanValue ?? 0).toFixed(1)}%` }}
           transition={{ duration: 0.5 }}
         />
       </div>
 
       <div className="mt-2 text-right text-purple-300 text-xs">
-        Scan Level: {scanValue.toFixed(1)}%
+        Scan Level: {(scanValue ?? 0).toFixed(1)}%
       </div>
     </motion.div>
   );

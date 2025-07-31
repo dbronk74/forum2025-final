@@ -27,7 +27,7 @@ const IdeaInspirationSpark: React.FC = () => {
 
   return (
     <div className="relative w-full h-40 bg-zinc-900 rounded-lg overflow-hidden">
-      {sparks.map(({ id, x, y, color }) => (
+      {(sparks ?? []).map(({ id, x, y, color }) => (
         <motion.div
           key={id}
           className="absolute rounded-full"

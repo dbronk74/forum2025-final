@@ -55,7 +55,7 @@ const RadialFeatureWheel: React.FC = () => {
           className="absolute top-1/2 left-1/2"
           style={{ transform: 'translate(-50%, -50%)' }}
         >
-          {features.map((feature, index) => {
+          {(features ?? []).map((feature, index) => {
             const angle = (index / features.length) * 2 * Math.PI;
             const x = Math.cos(angle) * radius;
             const y = Math.sin(angle) * radius;

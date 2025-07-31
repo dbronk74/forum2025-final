@@ -16,7 +16,7 @@ export default function CodexLoreGlyphRing() {
         transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
       >
         <svg viewBox="0 0 256 256" className="w-full h-full">
-          {glyphs.map((glyph, idx) => {
+          {(glyphs ?? []).map((glyph, idx) => {
             const angle = (360 / glyphs.length) * idx;
             const radians = (angle * Math.PI) / 180;
             const x = center + radius * Math.cos(radians);

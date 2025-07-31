@@ -16,7 +16,7 @@ const SanctumSigilThreadWeaver: React.FC = () => {
         Sigil Thread Weaver
       </motion.h2>
       <div className="space-y-2">
-        {sigilThreads.map((thread, index) => (
+        {(sigilThreads ?? []).map((thread, index) => (
           <motion.div
             key={index}
             className="p-2 bg-pink-600/30 rounded-md text-center border border-pink-300"

@@ -26,7 +26,7 @@ export default function SanctumMythicFragmentChronicle() {
         Sanctum Mythic Fragment Chronicle
       </h2>
       <div className="space-y-4">
-        {fragments.map((frag, idx) => (
+        {(fragments ?? []).map((frag, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, x: -40 }}

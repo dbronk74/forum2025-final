@@ -44,7 +44,7 @@ const GauntletCodexTemporalScroll: React.FC<GauntletCodexTemporalScrollProps> = 
       </motion.div>
 
       <div className="flex justify-center space-x-2 pb-4">
-        {entries.map((_, i) => (
+        {(entries ?? []).map((_, i) => (
           <button
             key={i}
             className={`w-3 h-3 rounded-full ${

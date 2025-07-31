@@ -15,7 +15,7 @@ const CodexSanctumSigilWeaver: React.FC = () => {
     canvas.height = canvas.offsetHeight * dpr;
     ctx.scale(dpr, dpr);
 
-    const points = glyphs.map((_, i) => ({
+    const points = (glyphs ?? []).map((_, i) => ({
       x: Math.random() * canvas.offsetWidth,
       y: Math.random() * canvas.offsetHeight,
       vx: (Math.random() - 0.5) * 0.4,

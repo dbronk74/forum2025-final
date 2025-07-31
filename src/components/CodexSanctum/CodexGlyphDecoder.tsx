@@ -17,7 +17,7 @@ export default function CodexGlyphDecoder() {
       <h2 className="text-2xl font-bold text-indigo-300 mb-6">Glyph Decoder</h2>
 
       <div className="grid grid-cols-5 gap-4 justify-items-center mb-6">
-        {glyphs.map((glyph, idx) => (
+        {(glyphs ?? []).map((glyph, idx) => (
           <motion.button
             key={idx}
             onClick={() => setSelected(idx)}

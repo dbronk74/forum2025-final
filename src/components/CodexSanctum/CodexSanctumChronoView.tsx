@@ -31,7 +31,7 @@ const CodexSanctumChronoView: React.FC = () => {
       <h2 className="text-2xl font-bold text-purple-300 mb-4 text-center">Codex Sanctum: Chrono View</h2>
 
       <div className="space-y-6">
-        {mockEvents.map((event, idx) => (
+        {(mockEvents ?? []).map((event, idx) => (
           <motion.div
             key={idx}
             className="border-l-4 border-violet-500 pl-4 relative"

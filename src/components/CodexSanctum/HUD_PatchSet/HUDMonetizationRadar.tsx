@@ -41,7 +41,7 @@ export default function HUDMonetizationRadar() {
         ))}
 
         {/* Ping points */}
-        {radarPings.map((ping, idx) => {
+        {(radarPings ?? []).map((ping, idx) => {
           const angleRad = (ping.angle * Math.PI) / 180;
           const x = center + ping.radius * Math.cos(angleRad);
           const y = center + ping.radius * Math.sin(angleRad);

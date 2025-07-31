@@ -19,7 +19,7 @@ const SanctumEchoWeftMap: React.FC = () => {
     >
       <h2 className="text-xl font-bold text-center mb-4">Echo Weft Map</h2>
       <div className="grid grid-cols-2 gap-4">
-        {echoData.map((node, index) => (
+        {(echoData ?? []).map((node, index) => (
           <motion.div
             key={index}
             className="bg-indigo-800 p-3 rounded-md shadow-inner"

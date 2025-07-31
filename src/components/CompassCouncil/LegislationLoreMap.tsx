@@ -31,7 +31,7 @@ const LegislationLoreMap: React.FC = () => {
         <h2 className="text-2xl font-bold">Legislation Lore Map</h2>
       </div>
       <div className="space-y-4">
-        {legislationList.map((law, idx) => (
+        {(legislationList ?? []).map((law, idx) => (
           <motion.div
             key={law.id}
             initial={{ opacity: 0, y: 10 }}

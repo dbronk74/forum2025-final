@@ -21,7 +21,7 @@ const GauntletCodexTimeRelays: React.FC<GauntletCodexTimeRelaysProps> = ({
       <h2 className="text-2xl font-bold text-yellow-900 mb-4 text-center tracking-wide">{title}</h2>
 
       <div className="relative pl-6 border-l-4 border-yellow-700 space-y-6">
-        {relays.map((entry, index) => (
+        {(relays ?? []).map((entry, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -30 }}

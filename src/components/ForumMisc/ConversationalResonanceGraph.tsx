@@ -22,7 +22,7 @@ const ConversationalResonanceGraph: React.FC<ConversationalResonanceGraphProps> 
     chartRef.current = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: data.map((_, i) => `T+${i}`),
+        labels: (data ?? []).map((_, i) => `T+${i}`),
         datasets: [
           {
             label: 'Resonance Level',

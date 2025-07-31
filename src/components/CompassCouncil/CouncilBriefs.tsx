@@ -31,7 +31,7 @@ const CouncilBriefs: React.FC = () => {
       </div>
 
       <div className="space-y-5">
-        {councilEntries.map(entry => (
+        {(councilEntries ?? []).map(entry => (
           <div
             key={entry.id}
             className="bg-slate-800/60 p-4 rounded-xl border border-slate-700 hover:bg-slate-800 transition-all"

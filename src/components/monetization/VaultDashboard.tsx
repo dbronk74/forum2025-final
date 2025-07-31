@@ -17,15 +17,15 @@ const VaultDashboard: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
         <div className="bg-zinc-800 p-4 rounded-xl">
           <p className="text-sm text-zinc-400">Total Earnings</p>
-          <p className="text-xl font-semibold text-green-400">${earnings.toFixed(2)}</p>
+          <p className="text-xl font-semibold text-green-400">${(earnings ?? 0).toFixed(2)}</p>
         </div>
         <div className="bg-zinc-800 p-4 rounded-xl">
           <p className="text-sm text-zinc-400">Pending Payouts</p>
-          <p className="text-xl font-semibold text-yellow-400">${pending.toFixed(2)}</p>
+          <p className="text-xl font-semibold text-yellow-400">${(pending ?? 0).toFixed(2)}</p>
         </div>
         <div className="bg-zinc-800 p-4 rounded-xl">
           <p className="text-sm text-zinc-400">Withdrawn</p>
-          <p className="text-xl font-semibold text-blue-400">${withdrawals.toFixed(2)}</p>
+          <p className="text-xl font-semibold text-blue-400">${(withdrawals ?? 0).toFixed(2)}</p>
         </div>
       </div>
 

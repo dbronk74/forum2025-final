@@ -28,7 +28,7 @@ const MythicFragmentChronicle: React.FC = () => {
     <div className="max-w-3xl mx-auto p-6 bg-gradient-to-tr from-purple-900 to-indigo-900 rounded-xl shadow-lg text-white select-none">
       <h2 className="text-2xl font-bold mb-6 text-center">Mythic Fragment Chronicle</h2>
       <ul className="space-y-5">
-        {fragments.map(({ id, title, description, timestamp }) => (
+        {(fragments ?? []).map(({ id, title, description, timestamp }) => (
           <li key={id} className="bg-purple-800 rounded-lg p-4 shadow-inner">
             <h3 className="text-xl font-semibold mb-1">{title}</h3>
             <p className="text-sm text-purple-300 mb-2">{description}</p>

@@ -20,7 +20,7 @@ const CodexScrollPane: React.FC<CodexScrollPaneProps> = ({
         {title}
       </div>
 
-      {content.map((entry, index) => (
+      {(content ?? []).map((entry, index) => (
         <div
           key={index}
           className="bg-zinc-900 border border-violet-800 p-3 rounded-md text-purple-100 font-serif text-sm leading-relaxed hover:scale-[1.01] transition-transform"

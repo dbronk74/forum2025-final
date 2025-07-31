@@ -17,7 +17,7 @@ const CodexSanctumGlyphTrail: React.FC = () => {
       <h2 className="text-2xl text-purple-300 font-bold text-center mb-4">Codex Sanctum: Glyph Trail</h2>
 
       <div className="flex flex-wrap justify-center gap-6 mt-4">
-        {glyphs.map((label, index) => (
+        {(glyphs ?? []).map((label, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center"

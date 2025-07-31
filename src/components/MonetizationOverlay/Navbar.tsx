@@ -29,7 +29,7 @@ const Navbar = () => {
           The Forum 2025
         </motion.div>
         <div className="hidden md:flex space-x-6 text-sm">
-          {navItems.map((item) => (
+          {(navItems ?? []).map((item) => (
             <Link
               key={item.name}
               to={item.path}

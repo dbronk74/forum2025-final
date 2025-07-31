@@ -20,7 +20,7 @@ const CompassSectorLegend: React.FC = () => {
     <div className="w-full max-w-md mx-auto bg-zinc-900 p-4 rounded-lg shadow-md border border-zinc-700">
       <h3 className="text-lg font-semibold text-center text-zinc-100 mb-3">Compass Sector Legend</h3>
       <div className="grid grid-cols-2 gap-4">
-        {compassSectors.map((sector, index) => (
+        {(compassSectors ?? []).map((sector, index) => (
           <div
             key={index}
             className="flex items-start space-x-2 border-l-4 pl-2"

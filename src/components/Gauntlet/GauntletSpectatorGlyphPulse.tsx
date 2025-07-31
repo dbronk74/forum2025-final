@@ -40,7 +40,7 @@ const GauntletSpectatorGlyphPulse: React.FC = () => {
   return (
     <div className="absolute inset-0 pointer-events-none z-30 overflow-hidden">
       <AnimatePresence>
-        {pulses.map((pulse) => (
+        {(pulses ?? []).map((pulse) => (
           <motion.div
             key={pulse.id}
             initial={{ opacity: 0, scale: 0.4 }}

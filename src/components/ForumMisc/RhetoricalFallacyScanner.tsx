@@ -54,7 +54,7 @@ export default function RhetoricalFallacyScanner() {
         Rhetorical Fallacy Scanner
       </div>
       <ul className="space-y-2">
-        {fallacies.map((f, i) => (
+        {(fallacies ?? []).map((f, i) => (
           <motion.li
             key={i}
             initial={{ opacity: 0, x: -10 }}

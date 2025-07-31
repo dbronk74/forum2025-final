@@ -43,7 +43,7 @@ export default function CodexLoreDiffViewer() {
         <div>
           <h3 className="text-lg font-semibold text-indigo-400 mb-2">{versionA.title}</h3>
           <ul className="space-y-2 text-sm">
-            {versionA.lines.map((line, i) => (
+            {(versionA.lines ?? []).map((line, i) => (
               <li key={i}>{line}</li>
             ))}
           </ul>
@@ -51,7 +51,7 @@ export default function CodexLoreDiffViewer() {
         <div>
           <h3 className="text-lg font-semibold text-green-300 mb-2">{versionB.title}</h3>
           <ul className="space-y-2 text-sm">
-            {versionB.lines.map((line, i) => (
+            {(versionB.lines ?? []).map((line, i) => (
               <li key={i}>{diffLine(versionA.lines[i], line)}</li>
             ))}
           </ul>

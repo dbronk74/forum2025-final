@@ -43,7 +43,7 @@ const CouncilDirectiveTracker: React.FC = () => {
     <div className="w-full max-w-md mx-auto p-4 bg-slate-900 rounded-xl shadow-md border border-indigo-700">
       <h2 className="text-xl font-semibold text-indigo-300 mb-4 text-center">Council Directive Tracker</h2>
       <ul className="space-y-4">
-        {mockDirectives.map((directive) => (
+        {(mockDirectives ?? []).map((directive) => (
           <li key={directive.id} className="bg-slate-800 p-4 rounded-lg border border-slate-700">
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm font-semibold text-indigo-200">{directive.title}</span>

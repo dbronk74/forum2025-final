@@ -37,7 +37,7 @@ const MonetizationHUD: React.FC<MonetizationHUDProps> = ({ className }) => {
         className
       )}
     >
-      {buttons.map(({ label, icon, route }) => (
+      {(buttons ?? []).map(({ label, icon, route }) => (
         <button
           key={label}
           onClick={() => navigate(route)}

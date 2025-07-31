@@ -25,7 +25,7 @@ const FactionMemoryTrail = ({
     <div
       className={`relative flex ${isHorizontal ? 'flex-row' : 'flex-col'} gap-4 items-center justify-center p-4`}
     >
-      {entries.map((entry, index) => (
+      {(entries ?? []).map((entry, index) => (
         <motion.div
           key={index}
           className={`flex items-center gap-2 ${isHorizontal ? 'flex-col' : 'flex-row'}`}

@@ -25,7 +25,7 @@ const CouncilTopicBeacon: React.FC = () => {
     <div className="p-6 bg-slate-900 rounded-xl max-w-3xl mx-auto shadow-md border border-indigo-700">
       <h2 className="text-2xl font-bold text-indigo-300 mb-4 text-center">Council Topic Beacon</h2>
       <div className="grid gap-4">
-        {sampleTopics.map((topic, index) => (
+        {(sampleTopics ?? []).map((topic, index) => (
           <motion.div
             key={topic.id}
             initial={{ opacity: 0, scale: 0.9 }}

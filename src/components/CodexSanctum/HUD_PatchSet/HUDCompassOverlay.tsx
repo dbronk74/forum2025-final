@@ -19,7 +19,7 @@ export default function HUDCompassOverlay() {
   return (
     <div className="fixed bottom-8 right-8 w-64 h-64 bg-black bg-opacity-60 backdrop-blur-md rounded-full border border-indigo-700 shadow-xl z-50">
       <svg viewBox="0 0 256 256" className="w-full h-full">
-        {points.map((point, idx) => {
+        {(points ?? []).map((point, idx) => {
           const angle = (point.angle * Math.PI) / 180;
           const x = center + radius * Math.cos(angle);
           const y = center + radius * Math.sin(angle);

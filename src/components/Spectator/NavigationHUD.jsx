@@ -20,7 +20,7 @@ export default function NavigationHUD() {
       transition={{ duration: 0.5 }}
       className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-black/80 border border-purple-700 px-4 py-2 rounded-full shadow-xl flex space-x-4 backdrop-blur-sm z-50"
     >
-      {links.map((link, idx) => (
+      {(links ?? []).map((link, idx) => (
         <Link
           key={link.to}
           to={link.to}

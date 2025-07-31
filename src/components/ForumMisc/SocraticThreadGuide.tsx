@@ -80,7 +80,7 @@ export default function SocraticThreadGuide() {
       <div className="text-xs text-slate-400 mb-2">
         Tap a question to expand its follow-ups. Tracks nested inquiry paths.
       </div>
-      {sampleThread.map((node) => (
+      {(sampleThread ?? []).map((node) => (
         <ThreadItem key={node.id} node={node} />
       ))}
     </div>

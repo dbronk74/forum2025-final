@@ -42,7 +42,7 @@ const CollaborationMeter: React.FC<CollaborationMeterProps> = ({ value }) => {
       </svg>
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
         <div className={`text-2xl font-semibold ${getColor(value)}`}>
-          {value.toFixed(0)}%
+          {(value ?? 0).toFixed(0)}%
         </div>
       </div>
       <div className="absolute bottom-[-1.5rem] w-full text-center text-sm text-gray-300 tracking-wide">

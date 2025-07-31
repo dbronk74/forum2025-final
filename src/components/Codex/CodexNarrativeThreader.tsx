@@ -19,7 +19,7 @@ export default function CodexNarrativeThreader() {
     <div className="max-w-4xl mx-auto px-4 py-8 text-white">
       <h2 className="text-2xl font-bold text-center text-indigo-300 mb-6">Narrative Threader</h2>
       <div className="space-y-6">
-        {mockThreads.map((thread, index) => (
+        {(mockThreads ?? []).map((thread, index) => (
           <div key={thread.id} className="space-y-1">
             <div className="text-sm text-slate-300 italic">{thread.label}</div>
             <div className="flex space-x-2">

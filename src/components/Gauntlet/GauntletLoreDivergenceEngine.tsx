@@ -20,7 +20,7 @@ const renderBranch = (node: DivergenceNode, depth: number = 0): JSX.Element => {
       >
         {node.interpretation}
       </div>
-      {node.branchPoints.map((child) => renderBranch(child, depth + 1))}
+      {(node.branchPoints ?? []).map((child) => renderBranch(child, depth + 1))}
     </div>
   );
 };

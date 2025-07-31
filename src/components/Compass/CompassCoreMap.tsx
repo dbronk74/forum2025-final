@@ -12,7 +12,7 @@ const coreRings = [
 const CompassCoreMap: React.FC = () => {
   return (
     <div className="relative w-full max-w-md mx-auto aspect-square flex items-center justify-center bg-gradient-to-br from-black via-slate-900 to-slate-800 border border-slate-600 rounded-2xl shadow-xl">
-      {coreRings.map((ring, index) => (
+      {(coreRings ?? []).map((ring, index) => (
         <motion.div
           key={index}
           className={`absolute rounded-full border ${ring.size} ${ring.color}`}

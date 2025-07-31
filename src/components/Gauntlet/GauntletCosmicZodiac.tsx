@@ -24,7 +24,7 @@ const GauntletCosmicZodiac: React.FC = () => {
     <div className="relative w-[280px] h-[280px] mx-auto">
       <div className="absolute inset-0 rounded-full border-2 border-indigo-500/40 blur-sm animate-pulse" />
       <svg width="280" height="280" className="absolute">
-        {zodiacSigns.map((sign, i) => {
+        {(zodiacSigns ?? []).map((sign, i) => {
           const angle = (2 * Math.PI * i) / zodiacSigns.length;
           const x = center + radius * Math.cos(angle) - 12;
           const y = center + radius * Math.sin(angle) + 4;

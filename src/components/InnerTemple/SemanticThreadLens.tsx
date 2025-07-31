@@ -25,7 +25,7 @@ const SemanticThreadLens: React.FC = () => {
     <div className="max-w-md mx-auto bg-zinc-900 rounded-lg p-6 shadow-lg text-white select-none">
       <h3 className="text-xl font-semibold mb-4 text-center">Semantic Thread Lens</h3>
       <ul className="space-y-3">
-        {threads.map(({ id, text, relevance }) => (
+        {(threads ?? []).map(({ id, text, relevance }) => (
           <li key={id} className="flex justify-between items-center bg-zinc-800 rounded-md p-3">
             <span>{text}</span>
             <span className="text-cyan-400 font-semibold">{relevance}%</span>

@@ -12,7 +12,7 @@ const CodexSanctumPulseEmitter: React.FC = () => {
       </p>
 
       <div className="relative w-64 h-64 mx-auto">
-        {pulses.map((pulse, index) => (
+        {(pulses ?? []).map((pulse, index) => (
           <motion.div
             key={index}
             className="absolute inset-0 rounded-full border-2 border-purple-500"

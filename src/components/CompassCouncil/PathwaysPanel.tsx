@@ -18,7 +18,7 @@ const PathwaysPanel: React.FC<PathwaysPanelProps> = ({ pathways }) => {
     const width = 800;
     const height = 500;
 
-    const nodes = pathways.map((p) => ({ id: p.id, label: p.label }));
+    const nodes = (pathways ?? []).map((p) => ({ id: p.id, label: p.label }));
     const links = pathways
       .filter((p) => p.from)
       .map((p) => ({ source: p.from!, target: p.id }));

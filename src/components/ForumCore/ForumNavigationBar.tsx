@@ -24,7 +24,7 @@ const ForumNavigationBar: React.FC = () => {
         </div>
 
         <div className="flex gap-6 text-sm font-medium">
-          {navLinks.map((link) => {
+          {(navLinks ?? []).map((link) => {
             const isActive = location.pathname.startsWith(link.path);
             return (
               <Link key={link.path} to={link.path} className="relative group">

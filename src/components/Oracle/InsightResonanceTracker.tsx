@@ -29,7 +29,7 @@ const InsightResonanceTracker: React.FC = () => {
     <div className="max-w-md mx-auto bg-zinc-900 p-4 rounded-lg shadow-lg text-white select-none">
       <h3 className="text-xl font-semibold mb-4 text-center">Insight Resonance Tracker</h3>
       <div className="flex space-x-2 overflow-x-auto">
-        {resonancePoints.map(({ id, value }) => (
+        {(resonancePoints ?? []).map(({ id, value }) => (
           <motion.div
             key={id}
             className="bg-purple-600 rounded-sm"

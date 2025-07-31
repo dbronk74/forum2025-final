@@ -22,7 +22,7 @@ const CodexSymbolicCompass: React.FC = () => {
         </div>
       </div>
 
-      {directions.map((dir, index) => (
+      {(directions ?? []).map((dir, index) => (
         <div
           key={index}
           className="absolute text-[10px] text-purple-400 font-mono uppercase"

@@ -40,7 +40,7 @@ export default function TruthTensionGauge() {
       </div>
 
       <div className="text-right text-sm text-red-300 font-mono">
-        {tension.toFixed(0)}%
+        {(tension ?? 0).toFixed(0)}%
       </div>
 
       <motion.div

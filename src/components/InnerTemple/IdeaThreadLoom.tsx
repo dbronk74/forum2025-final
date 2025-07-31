@@ -44,7 +44,7 @@ const IdeaThreadLoom: React.FC = () => {
 
   return (
     <div className="relative w-full h-64 bg-zinc-900 rounded-lg overflow-hidden">
-      {threads.map(({ id, text, x, y, color, length }) => (
+      {(threads ?? []).map(({ id, text, x, y, color, length }) => (
         <div
           key={id}
           className="absolute text-xs font-semibold text-white"

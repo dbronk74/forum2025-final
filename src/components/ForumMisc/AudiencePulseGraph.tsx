@@ -17,7 +17,7 @@ interface AudiencePulseGraphProps {
 
 const AudiencePulseGraph: React.FC<AudiencePulseGraphProps> = ({ pulseData }) => {
   const data = {
-    labels: pulseData.map((_, i) => i.toString()),
+    labels: (pulseData ?? []).map((_, i) => i.toString()),
     datasets: [
       {
         label: 'Pulse',

@@ -29,7 +29,7 @@ const DirectionalInsightWheel: React.FC = () => {
       </div>
 
       <div className="relative grid grid-cols-3 grid-rows-3 gap-6">
-        {directions.map((dir, idx) => (
+        {(directions ?? []).map((dir, idx) => (
           <motion.div
             key={idx}
             className="flex flex-col items-center text-sm text-center"

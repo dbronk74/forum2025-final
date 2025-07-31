@@ -25,7 +25,7 @@ const CouncilSignalChamber: React.FC = () => {
     <div className="w-full max-w-3xl mx-auto p-6 bg-slate-900 rounded-xl shadow-lg border border-indigo-800">
       <h2 className="text-2xl font-bold text-center text-indigo-300 mb-6">Council Signal Chamber</h2>
       <div className="flex flex-col gap-4">
-        {mockSignals.map((signal, index) => (
+        {(mockSignals ?? []).map((signal, index) => (
           <motion.div
             key={signal.id}
             initial={{ scale: 0.8, opacity: 0 }}

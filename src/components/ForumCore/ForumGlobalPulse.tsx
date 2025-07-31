@@ -35,7 +35,7 @@ const ForumGlobalPulse: React.FC = () => {
       </div>
 
       <AnimatePresence>
-        {pulses.map((id) => (
+        {(pulses ?? []).map((id) => (
           <motion.div
             key={id}
             className="absolute w-full h-full rounded-full border border-purple-500"

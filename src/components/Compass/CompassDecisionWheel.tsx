@@ -29,7 +29,7 @@ const CompassDecisionWheel: React.FC = () => {
       </h3>
 
       <svg width="240" height="240" className="mx-auto">
-        {options.map((option, index) => {
+        {(options ?? []).map((option, index) => {
           const { x, y } = getCoords(index, options.length);
           const isSelected = selected === option.label;
           return (

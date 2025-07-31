@@ -45,7 +45,7 @@ export default function CodexLoreDiffViewer() {
         Displays conflicting Codex strands across factions and timelines.
       </p>
       <ul className="space-y-4">
-        {contradictions.map((c) => (
+        {(contradictions ?? []).map((c) => (
           <li
             key={c.id}
             className="border border-purple-600 rounded bg-zinc-900 p-4 shadow-inner"

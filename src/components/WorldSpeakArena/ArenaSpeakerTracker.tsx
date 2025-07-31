@@ -27,7 +27,7 @@ const ArenaSpeakerTracker: React.FC = () => {
     <div className="p-4 bg-white dark:bg-zinc-900 rounded shadow w-full max-w-xl mx-auto">
       <h2 className="text-lg font-bold mb-3 text-zinc-800 dark:text-zinc-100">Current Speakers</h2>
       <div className="space-y-2">
-        {speakers.map((speaker) => (
+        {(speakers ?? []).map((speaker) => (
           <motion.div
             key={speaker.id}
             initial={{ opacity: 0 }}

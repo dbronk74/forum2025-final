@@ -33,7 +33,7 @@ const GauntletEchoPillarMonument: React.FC = () => {
         Echo Pillar Monument
       </h2>
       <div className="flex flex-col-reverse items-center space-y-reverse space-y-4">
-        {mockEchoes.map((echo) => (
+        {(mockEchoes ?? []).map((echo) => (
           <motion.div
             key={echo.id}
             initial={{ scale: 0.9, opacity: 0 }}

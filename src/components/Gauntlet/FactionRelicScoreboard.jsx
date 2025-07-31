@@ -18,7 +18,7 @@ export default function FactionRelicScoreboard() {
     >
       <h2 className="text-sm font-bold text-purple-300 mb-2">Faction Relic Strength</h2>
       <div className="space-y-2">
-        {factions.map((faction) => (
+        {(factions ?? []).map((faction) => (
           <div key={faction.name} className="flex items-center justify-between text-sm">
             <span className="text-white">{faction.name}</span>
             <div className="flex items-center space-x-2">

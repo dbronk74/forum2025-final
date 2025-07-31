@@ -26,8 +26,8 @@ const CodexSanctumSymbolMapper: React.FC = () => {
         SYMBOL MAPPING ARRAY
       </div>
       <div className="grid grid-cols-10 gap-2">
-        {grid.map((row, rowIndex) =>
-          row.map((symbol, colIndex) => (
+        {(grid ?? []).map((row, rowIndex) =>
+          (row ?? []).map((symbol, colIndex) => (
             <div
               key={`${rowIndex}-${colIndex}`}
               className="flex items-center justify-center w-8 h-8 bg-zinc-800 rounded shadow text-purple-100 text-lg hover:bg-purple-700 hover:text-white transition-all duration-300"

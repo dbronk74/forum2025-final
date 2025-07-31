@@ -32,7 +32,7 @@ const CodexLoreFlareEmitter = () => {
         Emits flares when rare or critical lore events are triggered in the Codex.
       </p>
       <div className="relative h-40 w-full overflow-hidden bg-black rounded-lg">
-        {flares.map((flare) => (
+        {(flares ?? []).map((flare) => (
           <motion.div
             key={flare.id}
             className="absolute w-6 h-6 rounded-full bg-pink-500 shadow-2xl ring-2 ring-white/20"

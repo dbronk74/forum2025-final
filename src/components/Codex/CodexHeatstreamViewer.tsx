@@ -22,7 +22,7 @@ export default function CodexHeatstreamViewer() {
     <div className="max-w-2xl mx-auto bg-gradient-to-br from-black via-slate-900 to-gray-800 p-6 rounded-xl shadow-md text-white">
       <h2 className="text-2xl font-bold text-red-400 mb-6">Heatstream Viewer</h2>
       <div className="space-y-4">
-        {mockHeatData.map((entry, idx) => (
+        {(mockHeatData ?? []).map((entry, idx) => (
           <div key={idx}>
             <div className="flex justify-between mb-1">
               <span className="text-sm text-slate-300">{entry.topic}</span>

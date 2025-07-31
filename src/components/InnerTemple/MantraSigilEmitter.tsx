@@ -28,7 +28,7 @@ const MantraSigilEmitter: React.FC = () => {
   return (
     <div className="relative w-full h-64 bg-zinc-900 rounded-lg overflow-hidden select-none">
       <AnimatePresence>
-        {activeSigils.map(({ id, symbol, x, y }) => (
+        {(activeSigils ?? []).map(({ id, symbol, x, y }) => (
           <motion.div
             key={id}
             initial={{ opacity: 0, scale: 0 }}

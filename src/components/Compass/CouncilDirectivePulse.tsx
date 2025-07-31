@@ -78,7 +78,7 @@ const CouncilDirectivePulse: React.FC = () => {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {directives.map((directive) => (
+        {(directives ?? []).map((directive) => (
           <motion.div
             key={directive.id}
             className={clsx(

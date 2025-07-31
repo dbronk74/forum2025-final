@@ -24,7 +24,7 @@ const CodexLoreGlyphRing: React.FC<CodexLoreGlyphRingProps> = ({
         height: `${center * 2}px`,
       }}
     >
-      {glyphs.map((label, index) => {
+      {(glyphs ?? []).map((label, index) => {
         const angle = (index / glyphs.length) * 2 * Math.PI;
         const x = center + radius * Math.cos(angle) - size / 2;
         const y = center + radius * Math.sin(angle) - size / 2;

@@ -17,11 +17,11 @@ const ReasonVsEmotionTracker: React.FC<ReasonVsEmotionTrackerProps> = ({ reasonL
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2 text-blue-400">
           <Brain size={20} />
-          <span>Reason {reasonPercent.toFixed(1)}%</span>
+          <span>Reason {(reasonPercent ?? 0).toFixed(1)}%</span>
         </div>
         <div className="flex items-center gap-2 text-rose-400">
           <Heart size={20} />
-          <span>Emotion {emotionPercent.toFixed(1)}%</span>
+          <span>Emotion {(emotionPercent ?? 0).toFixed(1)}%</span>
         </div>
       </div>
 

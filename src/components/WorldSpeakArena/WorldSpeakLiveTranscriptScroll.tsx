@@ -9,7 +9,7 @@ const WorldSpeakLiveTranscriptScroll = () => {
 
   return (
     <div className="bg-white p-4 rounded-lg border border-gray-300 max-h-48 overflow-y-auto text-sm">
-      {lines.map((line, idx) => (
+      {(lines ?? []).map((line, idx) => (
         <p key={idx} className="text-gray-800 mb-1">{line}</p>
       ))}
     </div>

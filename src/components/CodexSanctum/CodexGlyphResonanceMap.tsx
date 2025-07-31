@@ -34,7 +34,7 @@ export default function CodexGlyphResonanceMap() {
   return (
     <div className="relative w-full max-w-xl aspect-square mx-auto bg-gradient-to-br from-black via-slate-900 to-zinc-800 border border-violet-800 rounded-xl overflow-hidden shadow-lg">
       <div className="absolute inset-0 grid grid-cols-12 grid-rows-12">
-        {glyphs.map((glyph) => (
+        {(glyphs ?? []).map((glyph) => (
           <motion.div
             key={glyph.id}
             className="absolute text-white text-xl font-bold"

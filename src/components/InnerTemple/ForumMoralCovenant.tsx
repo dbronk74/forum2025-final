@@ -26,7 +26,7 @@ const ForumMoralCovenant: React.FC = () => {
     >
       <h2 className="text-2xl font-bold mb-4">Forum Moral Covenant</h2>
       <ul className="list-disc list-inside space-y-2 mb-6 text-left text-lg">
-        {pledges.map((pledge, idx) => (
+        {(pledges ?? []).map((pledge, idx) => (
           <li key={idx}>{pledge}</li>
         ))}
       </ul>

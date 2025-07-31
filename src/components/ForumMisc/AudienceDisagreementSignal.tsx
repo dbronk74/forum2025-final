@@ -30,7 +30,7 @@ const AudienceDisagreementSignal: React.FC<AudienceDisagreementSignalProps> = ({
           exit={{ opacity: 0, y: -20, scale: 0.95 }}
           transition={{ duration: 0.3 }}
         >
-          ⚠️ Audience Disagreement Spiking: {disagreementLevel.toFixed(0)}%
+          ⚠️ Audience Disagreement Spiking: {(disagreementLevel ?? 0).toFixed(0)}%
         </motion.div>
       )}
     </AnimatePresence>

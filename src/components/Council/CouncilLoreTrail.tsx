@@ -34,7 +34,7 @@ const CouncilLoreTrail: React.FC = () => {
     <div className="bg-slate-950 text-white p-8 rounded-xl shadow-lg border border-slate-800 max-w-5xl mx-auto">
       <h2 className="text-2xl font-bold text-center mb-6 tracking-wide">Council Lore Trail</h2>
       <div className="space-y-5">
-        {loreEntries.map((entry, idx) => (
+        {(loreEntries ?? []).map((entry, idx) => (
           <motion.div
             key={idx}
             className="flex items-start gap-4 p-5 bg-slate-800 rounded-lg hover:bg-slate-700 transition"

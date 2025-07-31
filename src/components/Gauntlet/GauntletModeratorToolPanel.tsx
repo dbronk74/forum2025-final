@@ -66,7 +66,7 @@ const GauntletModeratorToolPanel: React.FC = () => {
         <div className="mb-4">
           <h3 className="text-purple-200 font-semibold mb-2">Flagged Users</h3>
           <ul className="list-disc list-inside text-red-400">
-            {flaggedUsers.map((user, index) => (
+            {(flaggedUsers ?? []).map((user, index) => (
               <li key={index}>{user}</li>
             ))}
           </ul>

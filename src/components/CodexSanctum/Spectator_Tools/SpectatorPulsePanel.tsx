@@ -17,7 +17,7 @@ export default function SpectatorPulsePanel() {
     <div className="fixed bottom-6 right-6 w-64 bg-zinc-900/80 border border-indigo-700 rounded-lg shadow-md p-4 text-white z-50">
       <h3 className="text-sm font-semibold text-indigo-300 mb-3">Spectator Pulse</h3>
       <div className="flex items-end gap-[2px] h-24">
-        {pulses.map((val, i) => (
+        {(pulses ?? []).map((val, i) => (
           <motion.div
             key={i}
             className="w-[5%] bg-indigo-500 rounded-sm"

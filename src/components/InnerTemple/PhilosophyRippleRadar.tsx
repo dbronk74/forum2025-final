@@ -32,7 +32,7 @@ const PhilosophyRippleRadar: React.FC = () => {
 
   return (
     <div className="relative w-full h-64 bg-gradient-to-br from-indigo-900 via-purple-900 to-black rounded-lg overflow-hidden">
-      {ripples.map(({ id, x, y, size, opacity }) => (
+      {(ripples ?? []).map(({ id, x, y, size, opacity }) => (
         <motion.div
           key={id}
           initial={{ opacity: opacity, scale: 0 }}

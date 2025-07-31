@@ -37,7 +37,7 @@ const CompassSignalPulse: React.FC = () => {
   return (
     <div className="relative w-full h-64 bg-zinc-950 rounded-xl overflow-hidden border border-zinc-800 shadow-inner">
       <AnimatePresence>
-        {pulses.map((pulse) => (
+        {(pulses ?? []).map((pulse) => (
           <motion.div
             key={pulse.id}
             initial={{ opacity: 0, scale: 0 }}

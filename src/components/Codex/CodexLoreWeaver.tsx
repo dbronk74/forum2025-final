@@ -20,7 +20,7 @@ export default function CodexLoreWeaver() {
     <div className="max-w-xl mx-auto bg-slate-900 p-6 rounded-xl shadow-md text-white space-y-6">
       <h2 className="text-2xl font-bold text-indigo-300">Codex Lore Weaver</h2>
       <div className="bg-slate-800 p-4 rounded-lg min-h-[180px] space-y-2 border border-indigo-600">
-        {weave.map((line, index) => (
+        {(weave ?? []).map((line, index) => (
           <motion.p
             key={index}
             className="text-sm text-purple-300 italic"

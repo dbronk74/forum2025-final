@@ -40,7 +40,7 @@ const CodexSpectralWindow: React.FC = () => {
         ref={ringRef}
         className="absolute inset-0 flex items-center justify-center z-0 animate-spin-slow"
       >
-        {spectralRings.map((borderClass, idx) => (
+        {(spectralRings ?? []).map((borderClass, idx) => (
           <div
             key={idx}
             className={`absolute rounded-full border-2 ${borderClass}`}

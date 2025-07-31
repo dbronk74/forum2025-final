@@ -14,7 +14,7 @@ const SanctumLoreGlyphEmitter: React.FC = () => {
     >
       <h2 className="text-xl font-semibold text-center mb-4">Lore Glyph Emitter</h2>
       <div className="flex justify-center space-x-4 text-3xl">
-        {glyphs.map((glyph, index) => (
+        {(glyphs ?? []).map((glyph, index) => (
           <motion.span
             key={index}
             className="hover:text-purple-300 transition"

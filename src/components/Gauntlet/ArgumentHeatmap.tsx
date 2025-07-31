@@ -1,80 +1,69 @@
-// src/components/ForumMisc/ArgumentHeatmap.tsx
-
 import React, { useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
+import * as d3 from 'd3';
 
-type ArgumentHeatmapProps = {
-  data: number[]; // Heat intensity for each participant or segment
-  labels?: string[]; // Optional labels like usernames or timestamps
-  title?: string;
-};
+interface ArgumentHeatmapProps {
+  data: number[][];
+  width?: number;
+  height?: number;
+}
 
-export default function ArgumentHeatmap({
+const ArgumentHeatmap: React.FC<ArgumentHeatmapProps> = ({
   data,
-  labels = [],
-  title = 'Argument Intensity Heatmap',
-}: ArgumentHeatmapProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const chartRef = useRef<Chart | null>(null);
+  width = 500,
+  height = 300,
+}) => {
+  const heatmapRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    if (canvasRef.current) {
-      if (chartRef.current) {
-        chartRef.current.destroy();
-      }
+    if (data && heatmapRef.current) {
+      const svg = d3.select(heatmapRef.current);
+      svg.selectAll('*').remove();
 
-      const ctx = canvasRef.current.getContext('2d');
-      if (!ctx) return;
+      const numRows = data.length;
+      const numCols = data[0]?.length || 0;
+      const cellWidth = width / numCols;
+      const cellHeight = height / numRows;
 
-      chartRef.current = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: labels.length ? labels : data.map((_, i) => `Turn ${i + 1}`),
-          datasets: [
-            {
-              label: 'Heat Level',
-              data,
-              backgroundColor: data.map((value) =>
-                `rgba(${Math.min(255, value * 25)}, ${50}, ${50}, 0.8)`
-              ),
-              borderRadius: 4,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { display: false },
-            title: {
-              display: true,
-              text: title,
-              color: '#ffffff',
-              font: {
-                size: 18,
-              },
-            },
-          },
-          scales: {
-            x: {
-              ticks: { color: '#ccc' },
-              grid: { color: 'rgba(255,255,255,0.05)' },
-            },
-            y: {
-              beginAtZero: true,
-              ticks: { color: '#ccc' },
-              grid: { color: 'rgba(255,255,255,0.05)' },
-            },
-          },
-        },
-      });
+      const colorScale = d3.scaleSequential(d3.interpolateYlOrRd)
+        .domain([0, d3.max(data.flat()) || 1]);
+
+      svg
+        .attr('width', width)
+        .attr('height', height)
+        .selectAll('rect')
+        .data(data.flat())
+        .enter()
+        .append('rect')
+        .attr('x', (_, i) => (i % numCols) * cellWidth)
+        .attr('y', (_, i) => Math.floor(i / numCols) * cellHeight)
+        .attr('width', cellWidth)
+        .attr('height', cellHeight)
+        .attr('fill', d => colorScale(d))
+        .attr('stroke', '#ffffff')
+        .attr('stroke-width', 1);
+
+      // Optional: add interactivity (tooltip example)
+      svg.selectAll('rect')
+        .on('mouseover', (event, d) => {
+          const tooltip = svg.append('text')
+            .attr('id', 'tooltip')
+            .attr('x', event.offsetX + 10)
+            .attr('y', event.offsetY - 10)
+            .attr('fill', '#000000')
+            .attr('font-size', '12px')
+            .text(d.toFixed(2));
+        })
+        .on('mouseout', () => {
+          svg.select('#tooltip').remove();
+        });
     }
-  }, [data, labels, title]);
+  }, [data, height, width]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 mt-6">
-      <div className="bg-zinc-900 border border-red-500/30 rounded-lg shadow-lg p-4">
-        <canvas ref={canvasRef} />
-      </div>
+    <div className="flex justify-center items-center bg-gray-100 p-4 rounded-xl shadow-md">
+      <svg ref={heatmapRef} className="rounded-lg overflow-hidden" />
     </div>
   );
-}
+};
+
+export default ArgumentHeatmap;

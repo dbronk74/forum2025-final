@@ -16,7 +16,7 @@ const VaultDashboard: React.FC = () => {
 
       <div className="bg-zinc-800 p-6 rounded-xl mb-10 shadow-lg">
         <h2 className="text-2xl font-semibold text-lime-300 mb-4">Current Balance</h2>
-        <p className="text-5xl font-bold text-white">${balance.toFixed(2)}</p>
+        <p className="text-5xl font-bold text-white">${(balance ?? 0).toFixed(2)}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">

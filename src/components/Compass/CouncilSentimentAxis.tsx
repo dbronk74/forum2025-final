@@ -23,7 +23,7 @@ const CouncilSentimentAxis: React.FC = () => {
         <h2 className="text-xl font-bold text-indigo-100">Council Sentiment Axis</h2>
       </div>
       <div className="space-y-4">
-        {sentimentData.map((sentiment, index) => {
+        {(sentimentData ?? []).map((sentiment, index) => {
           const percent = Math.abs(sentiment.value);
           const isPositive = sentiment.value >= 0;
           return (

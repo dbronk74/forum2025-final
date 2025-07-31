@@ -64,7 +64,7 @@ const CodexSanctumVersePath: React.FC = () => {
       <div className="absolute top-2 left-4 text-xs text-purple-400 tracking-widest font-semibold">
         VERSE PATHWAY
       </div>
-      {nodes.map(node => {
+      {(nodes ?? []).map(node => {
         const x = centerX + node.radius * Math.cos(node.angle);
         const y = centerY + node.radius * Math.sin(node.angle);
         return (

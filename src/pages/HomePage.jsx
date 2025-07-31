@@ -48,7 +48,7 @@ export default function HomePage() {
       </motion.h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {portals.map((portal, index) => (
+        {(portals ?? []).map((portal, index) => (
           <motion.div
             key={portal.name}
             className="rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:scale-105 transition-transform duration-300 cursor-pointer"

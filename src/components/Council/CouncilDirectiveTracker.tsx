@@ -38,7 +38,7 @@ const CouncilDirectiveTracker: React.FC = () => {
     <div className="bg-slate-950 text-white p-8 rounded-xl shadow-lg border border-slate-800 max-w-5xl mx-auto">
       <h2 className="text-2xl font-bold text-center mb-6 tracking-wide">Council Directive Tracker</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {directives.map((dir, idx) => (
+        {(directives ?? []).map((dir, idx) => (
           <motion.div
             key={idx}
             className="flex flex-col gap-2 bg-slate-800 p-5 rounded-lg hover:bg-slate-700 transition"

@@ -6,7 +6,7 @@ import { addCredits } from '../redux/slices/CreditLedgerSlice';
 const EarningsDisplay: React.FC = () => {
   const { balance, earningsHistory, spendLogs } = useSelector((state: any) => state.creditLedger);
   const dispatch = useDispatch();
-  const lastTransaction = [...earningsHistory, ...spendLogs.map(log => -log.amount)].sort((a, b) => b - a)[0];
+  const lastTransaction = [...earningsHistory, ...(spendLogs ?? []).map(log => -log.amount)].sort((a, b) => b - a)[0];
 
   return (
     <motion.div

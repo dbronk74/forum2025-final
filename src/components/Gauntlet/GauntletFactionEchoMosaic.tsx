@@ -29,7 +29,7 @@ const GauntletFactionEchoMosaic: React.FC<GauntletFactionEchoMosaicProps> = ({
       )}
       style={{ maxWidth: columns * (size + 8) }}
     >
-      {tiles.map((tile) => (
+      {(tiles ?? []).map((tile) => (
         <motion.div
           key={tile.id}
           className="flex items-center justify-center rounded-md"

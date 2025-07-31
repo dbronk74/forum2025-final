@@ -20,7 +20,7 @@ const CodexSanctumNavigator: React.FC = () => {
         Traverse symbolic realms of the Codex Sanctum through intuitive glyphic alignment.
       </p>
       <div className="grid grid-cols-3 gap-4">
-        {nodes.map((node) => (
+        {(nodes ?? []).map((node) => (
           <motion.button
             key={node.id}
             onClick={() => setSelected(node.id)}

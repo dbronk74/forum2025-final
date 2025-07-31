@@ -32,7 +32,7 @@ export default function CodexSanctumLoreRibbon() {
           ease: 'linear',
         }}
       >
-        {repeatedWords.map((word, i) => (
+        {(repeatedWords ?? []).map((word, i) => (
           <span key={i}>{word}</span>
         ))}
       </motion.div>

@@ -27,7 +27,7 @@ export default function SpectatorChimeFeed() {
   return (
     <div className="absolute inset-0 pointer-events-none z-40">
       <AnimatePresence>
-        {chimes.map((chime) => (
+        {(chimes ?? []).map((chime) => (
           <motion.div
             key={chime.id}
             className="absolute text-xl"

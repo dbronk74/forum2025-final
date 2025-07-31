@@ -32,7 +32,7 @@ const TreeNode: React.FC<{ node: LogicNode; depth?: number }> = ({ node, depth =
       </div>
       {expanded && node.children && (
         <div className="ml-4 border-l border-gray-600 pl-2">
-          {node.children.map((child) => (
+          {(node.children ?? []).map((child) => (
             <TreeNode key={child.id} node={child} depth={depth + 1} />
           ))}
         </div>

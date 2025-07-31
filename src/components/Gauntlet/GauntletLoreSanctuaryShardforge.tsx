@@ -29,7 +29,7 @@ const GauntletLoreSanctuaryShardforge: React.FC = () => {
 
   const bindShard = (id: number) => {
     setShards((prev) =>
-      prev.map((shard) =>
+      (prev ?? []).map((shard) =>
         shard.id === id ? { ...shard, bound: true } : shard
       )
     );
@@ -67,7 +67,7 @@ const GauntletLoreSanctuaryShardforge: React.FC = () => {
         <div>
           <h3 className="text-indigo-200 font-semibold mb-3">Forged Shards</h3>
           <ul className="space-y-3">
-            {shards.map((shard) => (
+            {(shards ?? []).map((shard) => (
               <li
                 key={shard.id}
                 className="p-4 bg-zinc-800 border border-zinc-700 rounded shadow-sm"

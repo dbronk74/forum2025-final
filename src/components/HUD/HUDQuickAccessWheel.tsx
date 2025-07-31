@@ -45,7 +45,7 @@ const HUDQuickAccessWheel: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          {icons.map((item, index) => {
+          {(icons ?? []).map((item, index) => {
             const angle = (360 / icons.length) * index;
             const x = radius * Math.cos((angle * Math.PI) / 180);
             const y = radius * Math.sin((angle * Math.PI) / 180);

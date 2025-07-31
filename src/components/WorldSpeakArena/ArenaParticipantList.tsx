@@ -23,7 +23,7 @@ const ArenaParticipantList: React.FC<ArenaParticipantListProps> = ({ participant
     <div className="bg-zinc-900 rounded-lg shadow-md p-4 w-full max-w-md">
       <h2 className="text-lg font-semibold text-white mb-3">Arena Participants</h2>
       <ul className="divide-y divide-zinc-700">
-        {participants.map((p, idx) => (
+        {(participants ?? []).map((p, idx) => (
           <li key={idx} className="flex justify-between items-center py-2">
             <span className="text-white font-medium">{p.name}</span>
             <span className={`${statusColorMap[p.status]} text-sm capitalize`}>

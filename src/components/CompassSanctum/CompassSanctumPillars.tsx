@@ -30,7 +30,7 @@ const CompassSanctumComponent2: React.FC = () => {
     <div className="bg-slate-950 text-white p-8 rounded-xl shadow-lg border border-slate-800 max-w-5xl mx-auto">
       <h2 className="text-2xl font-bold text-center mb-6 tracking-wide">Compass Sanctum - Pillars of Guidance</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {sanctumPillars.map((pillar, idx) => (
+        {(sanctumPillars ?? []).map((pillar, idx) => (
           <motion.div
             key={idx}
             className="bg-slate-800 p-5 rounded-lg flex items-start gap-4 hover:bg-slate-700 transition"

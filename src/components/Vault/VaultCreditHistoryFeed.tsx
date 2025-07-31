@@ -11,7 +11,7 @@ const VaultCreditHistoryFeed = () => {
     <div className="bg-white p-4 rounded-lg shadow-md">
       <h3 className="text-lg font-semibold mb-3">Credit History</h3>
       <ul className="text-sm text-gray-700 space-y-1">
-        {entries.map((e, i) => (
+        {(entries ?? []).map((e, i) => (
           <li key={i} className="flex justify-between">
             <span>{e.date} – {e.action}</span>
             <span>{e.amount}</span>

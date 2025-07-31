@@ -21,7 +21,7 @@ const CodexSanctumClarityWaveform: React.FC = () => {
       </h2>
 
       <div className="flex items-end h-40 overflow-hidden space-x-[2px] px-1 bg-black border border-zinc-700 rounded">
-        {waveData.map((height, index) => (
+        {(waveData ?? []).map((height, index) => (
           <div
             key={index}
             className="w-[4px] bg-purple-500 rounded-t"

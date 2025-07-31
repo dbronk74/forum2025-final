@@ -32,7 +32,7 @@ const CompassDebateTracker: React.FC = () => {
       </h2>
 
       <div className="flex justify-between items-center gap-3">
-        {stages.map((stage, index) => (
+        {(stages ?? []).map((stage, index) => (
           <motion.div
             key={index}
             className={`flex flex-col items-center justify-center text-xs text-slate-200 px-2 py-2 rounded-lg border ${

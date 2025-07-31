@@ -34,7 +34,7 @@ const CouncilSignalChamber: React.FC = () => {
     <div className="bg-slate-950 text-white rounded-xl p-8 shadow-lg border border-slate-800 max-w-5xl mx-auto">
       <h2 className="text-2xl font-bold text-center mb-6 tracking-wide">Council Signal Chamber</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {signalStats.map((signal, idx) => (
+        {(signalStats ?? []).map((signal, idx) => (
           <motion.div
             key={idx}
             className="bg-slate-800 p-5 rounded-lg hover:bg-slate-700 transition flex flex-col gap-2"

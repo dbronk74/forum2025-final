@@ -60,7 +60,7 @@ export default function TopicDriftTracker() {
       </div>
 
       <div className="text-right text-xs mt-1 text-yellow-400 font-bold">
-        {drift.driftPercent.toFixed(1)}% Drift
+        {(drift.driftPercent ?? 0).toFixed(1)}% Drift
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ const GauntletRebuttalTracker: React.FC = () => {
     <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 shadow-lg">
       <h2 className="text-xl font-semibold text-indigo-300 mb-4">Rebuttal Tracker</h2>
       <div className="space-y-4 max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-zinc-600">
-        {rebuttals.map((rebuttal) => (
+        {(rebuttals ?? []).map((rebuttal) => (
           <motion.div
             key={rebuttal.id}
             initial={{ opacity: 0, x: -20 }}
@@ -54,7 +54,7 @@ const GauntletRebuttalTracker: React.FC = () => {
             </div>
             <p className="text-zinc-100 text-base">{rebuttal.statement}</p>
             <div className="mt-2 text-xs text-indigo-400">
-              Clarity Score: {rebuttal.clarityScore.toFixed(1)}
+              Clarity Score: {(rebuttal.clarityScore ?? 0).toFixed(1)}
             </div>
           </motion.div>
         ))}

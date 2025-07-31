@@ -27,7 +27,7 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white p-8">
       <h1 className="text-4xl font-bold text-center mb-12">Welcome to The Forum 2025</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
-        {branches.map(({ name, image, route }) => (
+        {(branches ?? []).map(({ name, image, route }) => (
           <motion.div
             key={name}
             className="relative w-full max-w-xs cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl border border-white/10"

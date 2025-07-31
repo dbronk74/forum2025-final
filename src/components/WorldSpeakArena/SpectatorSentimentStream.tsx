@@ -40,7 +40,7 @@ const SpectatorSentimentStream: React.FC = () => {
 
   return (
     <div className="flex space-x-1 p-2 overflow-x-auto w-full bg-black rounded shadow-inner">
-      {pulses.map((pulse) => (
+      {(pulses ?? []).map((pulse) => (
         <motion.div
           key={pulse.id}
           initial={{ scale: 0.8, opacity: 0 }}

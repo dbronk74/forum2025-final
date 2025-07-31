@@ -18,7 +18,7 @@ const ArenaSpectatorReactionBar: React.FC<ArenaSpectatorReactionBarProps> = ({ r
   return (
     <div className="w-full bg-gray-900 bg-opacity-70 p-2 rounded-lg shadow-md">
       <div className="flex items-center space-x-2">
-        {reactions.map((reaction, index) => {
+        {(reactions ?? []).map((reaction, index) => {
           const widthPercent = total > 0 ? (reaction.count / total) * 100 : 0;
 
           return (

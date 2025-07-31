@@ -21,7 +21,7 @@ const LiveBetPool = () => {
       <p className="mb-4 text-sm text-gray-300">⏳ Time Left: <span className="font-bold">{countdown}s</span></p>
 
       <ul className="mb-4 text-sm">
-        {bets.map((bet, i) => (
+        {(bets ?? []).map((bet, i) => (
           <li key={i} className="py-1">
             💰 <span className="text-green-400">${bet.amount}</span> on <span className="font-bold text-yellow-400">{bet.side}</span>
           </li>

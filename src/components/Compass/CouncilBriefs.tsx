@@ -42,7 +42,7 @@ const CouncilBriefs: React.FC = () => {
 
       <ScrollArea className="h-72 pr-2">
         <div className="space-y-4">
-          {sampleBriefs.map((brief, index) => (
+          {(sampleBriefs ?? []).map((brief, index) => (
             <motion.div
               key={index}
               className="bg-gray-800 border border-gray-700 rounded-md p-4"

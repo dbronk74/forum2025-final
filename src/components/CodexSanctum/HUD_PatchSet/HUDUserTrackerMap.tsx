@@ -28,7 +28,7 @@ export default function HUDUserTrackerMap() {
         ))}
 
         {/* Users */}
-        {mockUsers.map((user, idx) => {
+        {(mockUsers ?? []).map((user, idx) => {
           const rad = (user.angle * Math.PI) / 180;
           const x = center + user.distance * Math.cos(rad);
           const y = center + user.distance * Math.sin(rad);

@@ -30,7 +30,7 @@ const CompassOverlayGuide: React.FC = () => {
     <div className="bg-slate-950 text-white rounded-xl shadow-lg p-8 border border-slate-800 max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold text-center mb-6 tracking-wide">Compass Overlay Guide</h2>
       <div className="space-y-5">
-        {guideItems.map((item, idx) => (
+        {(guideItems ?? []).map((item, idx) => (
           <motion.div
             key={idx}
             className="flex items-start gap-4 bg-slate-800 p-4 rounded-lg hover:bg-slate-700 transition"

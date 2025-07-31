@@ -28,7 +28,7 @@ export default function SpectatorMimicEcho() {
   return (
     <div className="absolute inset-0 pointer-events-none z-30">
       <AnimatePresence>
-        {echoes.map((echo) => (
+        {(echoes ?? []).map((echo) => (
           <motion.div
             key={echo.id}
             className={`absolute rounded-full border-2 border-${echo.color}-400`}

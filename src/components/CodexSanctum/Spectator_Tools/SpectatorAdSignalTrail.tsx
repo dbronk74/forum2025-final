@@ -27,7 +27,7 @@ export default function SpectatorAdSignalTrail() {
 
   return (
     <div className="absolute inset-0 pointer-events-none z-40">
-      {signals.map((signal) => (
+      {(signals ?? []).map((signal) => (
         <motion.div
           key={signal.id}
           className={`absolute w-3 h-3 rounded-full bg-${signal.color}-400 shadow-md`}

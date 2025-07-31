@@ -39,7 +39,7 @@ const CodexArchiveViewer: React.FC = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {mockArchive.map((entry) => (
+        {(mockArchive ?? []).map((entry) => (
           <motion.div
             key={entry.id}
             className={`cursor-pointer p-4 rounded-md border hover:border-purple-400 ${

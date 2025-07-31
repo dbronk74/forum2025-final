@@ -32,7 +32,7 @@ const AICommentaryTrack: React.FC = () => {
     >
       <h3 className="text-lg font-semibold mb-3">AI Commentary Track</h3>
       <ul className="space-y-2">
-        {entries.map(({ id, timestamp, text }) => (
+        {(entries ?? []).map(({ id, timestamp, text }) => (
           <li key={id} className="bg-zinc-800 rounded-md p-2 text-sm">
             <span className="font-mono text-cyan-400 mr-2">{timestamp}</span>
             <span>{text}</span>

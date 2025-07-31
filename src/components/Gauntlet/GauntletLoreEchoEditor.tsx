@@ -24,7 +24,7 @@ const GauntletLoreEchoEditor: React.FC = () => {
 
   const updateEditedText = (id: string, newText: string) => {
     setEchoes((prev) =>
-      prev.map((echo) =>
+      (prev ?? []).map((echo) =>
         echo.id === id ? { ...echo, editedText: newText } : echo
       )
     );
@@ -39,7 +39,7 @@ const GauntletLoreEchoEditor: React.FC = () => {
     <div className="bg-zinc-900 p-6 rounded-xl border border-indigo-500 shadow-lg">
       <h2 className="text-indigo-300 text-xl font-bold mb-4">📜 Lore Echo Editor</h2>
       <div className="space-y-6 max-h-[400px] overflow-y-auto pr-2">
-        {echoes.map((echo) => (
+        {(echoes ?? []).map((echo) => (
           <div
             key={echo.id}
             className="bg-zinc-800 p-4 rounded-lg border border-zinc-700"

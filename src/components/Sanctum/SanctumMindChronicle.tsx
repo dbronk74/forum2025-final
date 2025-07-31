@@ -11,7 +11,7 @@ const SanctumMindChronicle: React.FC = () => {
     <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-4 max-w-md shadow-lg">
       <h2 className="text-xl text-emerald-300 font-semibold mb-3">🧠 Mind Chronicle</h2>
       <ul className="space-y-2 max-h-60 overflow-y-auto">
-        {mockChronicle.map((entry, idx) => (
+        {(mockChronicle ?? []).map((entry, idx) => (
           <li key={idx} className="text-sm text-gray-200 border-b border-zinc-600 pb-2">
             <span className="text-emerald-400 font-mono">{entry.time}</span> — {entry.entry}
           </li>

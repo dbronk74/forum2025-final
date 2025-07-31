@@ -22,17 +22,17 @@ export default function EarningsDisplay() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        Total Balance: <span className="text-green-300 font-semibold">${balance.toFixed(2)}</span>
+        Total Balance: <span className="text-green-300 font-semibold">${(balance ?? 0).toFixed(2)}</span>
       </motion.p>
 
       <div className="max-w-3xl mx-auto bg-zinc-800 p-6 rounded-lg shadow-lg space-y-4">
         {transactions.length === 0 ? (
           <p className="text-center text-gray-500">No transactions yet.</p>
         ) : (
-          transactions.map((tx, i) => (
+          (transactions ?? []).map((tx, i) => (
             <div key={i} className="flex justify-between text-sm border-b border-zinc-700 py-2">
               <span className="capitalize">{tx.type}</span>
-              <span className="text-cyan-300">${tx.amount.toFixed(2)}</span>
+              <span className="text-cyan-300">${(tx.amount ?? 0).toFixed(2)}</span>
               <span className="text-gray-400">{new Date(tx.timestamp).toLocaleString()}</span>
             </div>
           ))

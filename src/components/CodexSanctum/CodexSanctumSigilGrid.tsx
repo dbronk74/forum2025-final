@@ -18,7 +18,7 @@ const CodexSanctumSigilGrid: React.FC = () => {
     <div className="p-6 bg-gradient-to-br from-zinc-800 to-purple-900 rounded-xl shadow-lg border border-purple-700">
       <h2 className="text-xl font-bold text-purple-200 mb-4 text-center">Codex Sigil Grid</h2>
       <div className="grid grid-cols-4 gap-6">
-        {sigils.map((sigil, index) => (
+        {(sigils ?? []).map((sigil, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center text-purple-300 hover:text-purple-100 transition duration-300"

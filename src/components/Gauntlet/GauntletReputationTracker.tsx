@@ -24,7 +24,7 @@ const GauntletReputationTracker: React.FC<GauntletReputationTrackerProps> = ({
           style={{ height: `${reputationScore}%` }}
         />
 
-        {tiers.map((tier, index) => {
+        {(tiers ?? []).map((tier, index) => {
           const topPercent = 100 - (index / (tiers.length - 1)) * 100;
           const isActive = index === activeTierIndex;
           return (

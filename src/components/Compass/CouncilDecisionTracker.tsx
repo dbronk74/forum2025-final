@@ -65,7 +65,7 @@ const CouncilDecisionTracker: React.FC = () => {
 
       <ScrollArea className="h-80 pr-2">
         <div className="space-y-5">
-          {mockDecisions.map((decision, idx) => {
+          {(mockDecisions ?? []).map((decision, idx) => {
             const totalVotes = decision.votes.for + decision.votes.against + decision.votes.abstain;
             const forPct = (decision.votes.for / totalVotes) * 100;
             const againstPct = (decision.votes.against / totalVotes) * 100;

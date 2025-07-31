@@ -37,7 +37,7 @@ const CodexLoreWeaver: React.FC = () => {
     <div className="relative bg-gradient-to-br from-purple-950 to-indigo-900 p-4 rounded-xl shadow-md text-white h-64">
       <h2 className="text-lg font-bold mb-2">Codex Lore Weaver</h2>
       <svg className="absolute inset-0 w-full h-full">
-        {threads.map((thread) => (
+        {(threads ?? []).map((thread) => (
           <motion.line
             key={thread.id}
             x1={`${thread.x1}%`}

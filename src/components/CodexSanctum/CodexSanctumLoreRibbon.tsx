@@ -12,7 +12,7 @@ const CodexSanctumLoreRibbon: React.FC = () => {
       </p>
 
       <div className="relative h-32 w-full overflow-hidden">
-        {ribbonSegments.map((seg, idx) => (
+        {(ribbonSegments ?? []).map((seg, idx) => (
           <motion.div
             key={idx}
             className="absolute w-10 h-10 bg-purple-500 rounded-full shadow-md opacity-70"

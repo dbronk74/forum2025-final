@@ -38,7 +38,7 @@ const GauntletDebateSummaryPanel: React.FC = () => {
   return (
     <div className="bg-gray-900 border border-purple-600 rounded-xl p-6 shadow-lg w-full max-w-md mx-auto mt-8">
       <h2 className="text-xl text-purple-300 font-semibold mb-4 text-center">Debate Summary</h2>
-      {metrics.map((m) => (
+      {(metrics ?? []).map((m) => (
         <MetricBar key={m.label} label={m.label} value={m.value} color={m.color} />
       ))}
       <p className="text-xs text-gray-500 text-center mt-6 italic">Scores generated from audience and AI analysis.</p>

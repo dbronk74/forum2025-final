@@ -19,7 +19,7 @@ const CodexLorePulseTracer: React.FC = () => {
     <div className="relative h-64 bg-gradient-to-br from-indigo-900 to-zinc-900 rounded-lg shadow-inner overflow-hidden">
       <h2 className="text-white text-xl font-semibold mb-3 pl-4 pt-2">Lore Pulse Tracer</h2>
       <div className="relative w-full h-full">
-        {pulses.map((pulse, idx) => (
+        {(pulses ?? []).map((pulse, idx) => (
           <motion.div
             key={pulse}
             className="absolute rounded-full border border-purple-500"
