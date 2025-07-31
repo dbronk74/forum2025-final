@@ -4,6 +4,13 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'text-white', 'text-blue-300', 'text-purple-200', 'text-gray-600',
+    'bg-zinc-900', 'bg-gradient-to-br', 'from-black', 'via-zinc-900', 'to-gray-900',
+    'rounded-2xl', 'shadow-lg', 'border', 'border-white/10',
+    'hover:scale-105', 'transition-transform', 'duration-300',
+    'grid-cols-1', 'sm:grid-cols-2', 'lg:grid-cols-3'
+  ],
   theme: {
     extend: {
       animation: {
